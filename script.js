@@ -8,3 +8,7 @@ function restar(){
 
     return 7-5;
 }
+
+function restar(){
+    return 7-3;
+}
