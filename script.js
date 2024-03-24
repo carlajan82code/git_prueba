@@ -1,5 +1,5 @@
 function sumar(){
 
-return 5+5;
+return 10 + 10;
 
 }
