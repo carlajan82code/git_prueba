@@ -57,7 +57,7 @@ session_start();
 
 </footer>
 
-
+<p>Hola</p>
 </body>
 </html>
 
