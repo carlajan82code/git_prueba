@@ -80,18 +80,18 @@ function obtener_num_filas($resultado){
 }
 
 function login($con, $username, $password){
-	// $stmt = mysqli_prepare($con, "select * from usuario where nombre=?;");
-	// mysqli_stmt_bind_param($stmt, "s", $username);
-	// mysqli_stmt_execute($stmt);
-	// $result = mysqli_stmt_get_result($stmt);
-	// if(obtener_num_filas($result)>0){
-	// 	$datosUsuario = mysqli_fetch_array($result);
-	// 	if(password_verify($password, $datosUsuario['pass'])){
-	// 		return $datosUsuario;
-	// 	}
-	// 	return false;
-	// }
-	// return false;
+	$stmt = mysqli_prepare($con, "select * from usuario where nombre=?;");
+	mysqli_stmt_bind_param($stmt, "s", $username);
+	mysqli_stmt_execute($stmt);
+	$result = mysqli_stmt_get_result($stmt);
+	if(obtener_num_filas($result)>0){
+		$datosUsuario = mysqli_fetch_array($result);
+		if(password_verify($password, $datosUsuario['pass'])){
+			return $datosUsuario;
+		}
+		return false;
+	}
+	return false;
 
 	/** VALIDACIÓN AQUI */
 }
