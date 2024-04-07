@@ -57,8 +57,6 @@ session_start();
 
 </footer>
 
-<p>Hola</p>
-<p>Hola GitHub</p>
 </body>
 </html>
 
