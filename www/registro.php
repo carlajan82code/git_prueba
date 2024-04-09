@@ -31,7 +31,7 @@
 </div>
 <div>
 
-    <button type="submit" onclick="validar_registro()" name="submit" class="boton_registro">Registrarse</button>
+    <button type="submit" onclick="validar_registro()" name="registro" class="boton_registro">Registrarse</button>
 </div>
 <div class="boton_separacion">
     <p>¿Ya tienes una cuenta?</p>

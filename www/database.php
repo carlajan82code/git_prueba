@@ -114,8 +114,8 @@ function crear_usuario($con, $nombre, $pass, $tipo){
 	$password = password_hash($pass, PASSWORD_DEFAULT);
 	$stmt = mysqli_prepare($con, "insert into usuario(nombre, pass, tipo) values(?,?,?);");
 	mysqli_stmt_bind_param($stmt, "ssi", $nombre, $password, $tipo);
-	mysqli_stmt_execute($stmt);
-	return $resultado;
+	return mysqli_stmt_execute($stmt);
+	//return $resultado;
 }
 
 function borrar_usuarios($con, $codigos){
@@ -153,8 +153,8 @@ function obtener_usuario($con, $id){
 function crear_pista($con, $nombre){
 	$stmt = mysqli_prepare($con, "insert into pista(nombre) values(?);");
 	mysqli_stmt_bind_param($stmt, "s", $nombre);
-	mysqli_stmt_execute($stmt);
-	return $resultado;
+	return mysqli_stmt_execute($stmt);
+	//return $resultado;
 }
 
 function borrar_pistas($con, $codigos){
