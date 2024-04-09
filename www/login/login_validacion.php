@@ -14,7 +14,8 @@ if (!validaEmail($email) || !validaContrasena($contrasena)){
 	die;
 }
 
-$usuario = login($con, $_POST['email'], $_POST['contrasena']);
+$con = conectar();
+$usuario = login($con, $email, $contrasena);
 if(empty($usuario)){
 	echo "Las credenciales introducidas no son correctas.";
 	die;
