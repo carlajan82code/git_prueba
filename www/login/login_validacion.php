@@ -1,21 +1,41 @@
 <?php
 require_once ("../database.php");
 
-if(isset($_POST['login'])){
-	$usuario = login($con, $_POST['username'], $_POST['password']);
-	if(empty($usuario)){
-		echo "Las credenciales introducidas no son correctas.";
-	}
-	else{
-		$_SESSION['logged_user'] = $usuario['id_usuario'];
-		$_SESSION['logged_user_name'] = $usuario['nombre'];
-		$_SESSION['logged_user_type'] = $usuario['tipo'];
-		if($usuario['tipo'] == 0){
-			header("Location: admin_page.php");
-		}
-		else{
-			header("Location: user_page.php");	
-		}
-	}
+$login = $_POST['login'];
+$email = $_POST['email'];
+$contrasena = $_POST['contrasena'];
+if(!isset($login) || !isset($email) || !isset($contrasena)){
+	echo "Las credenciales introducidas no son correctas.";
+	die;
 }
-?>
+
+if (!validaEmail($email) || !validaContrasena($contrasena)){
+	echo "Las credenciales introducidas no son correctas.";
+	die;
+}
+
+$usuario = login($con, $_POST['email'], $_POST['contrasena']);
+if(empty($usuario)){
+	echo "Las credenciales introducidas no son correctas.";
+	die;
+}
+
+session_start();
+$_SESSION['logged_user'] = $usuario['id_usuario'];
+$_SESSION['logged_user_name'] = $usuario['nombre'];
+$_SESSION['logged_user_type'] = $usuario['tipo'];
+if($usuario['tipo'] == 0){
+	header("Location: admin_page.php");
+	die;
+}
+header("Location: user_page.php");
+
+function validaEmail($email){
+	$emailRegex = '/^[^\s@]+@[^\s@]+\.[^\s@]+$/';
+	return preg_match($emailRegex, $email);
+}
+
+function validaContrasena($contrasena){
+	$contrasenaRegex = '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/';
+	return preg_match($contrasenaRegex, $contrasena);
+}
