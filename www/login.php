@@ -14,7 +14,7 @@
 
     ?>
 
-    <form method="post" action="./login_validacion.php" class="form_login ">
+    <form method="post" action="./login/login_validacion.php" class="form_login ">
         <div class="form_contenedor">
             <div class="form_input" id="nombre_registro">
                 <label for="email">Email</label>
