@@ -1,24 +1,34 @@
 <?php
-$host = "localhost";
-$user = "root";
-$password = "root";
-$db_name = "padel";
+
+$host = "local-mysql-bdd";
+$user = "db_user";
+$pass = "password";
+$db_name = "grupo14";
+$db_port = 3306;
+
+//$host = "localhost";
+//$user = "root";
+//$password = "root";
+//$db_name = "padel";
 
 $con;
 
 function conectar(){
-	$con = mysqli_connect($GLOBALS["host"], $GLOBALS["user"], $GLOBALS["password"]) or die("Error al conectar con la base de datos");
-	crear_bdd($con);
+	$con = mysqli_connect($GLOBALS["host"], $GLOBALS["user"], $GLOBALS["pass"], $GLOBALS["db_port"]) or die("Error al conectar con la base de datos");
+	//crear_bdd($con);
 	mysqli_select_db($con, $GLOBALS["db_name"]);
-	crear_tabla_pista($con);
-	crear_tabla_usuario($con);
-	crear_tabla_reserva($con);
+	//crear_tabla_pista($con);
+	//crear_tabla_usuario($con);
+	//crear_tabla_reserva($con);
 	return $con;
 }
 
+/* La base de datos la crea el Docker
 function crear_bdd($con){
 	mysqli_query($con, "create database if not exists ".$GLOBALS["db_name"].";");
-}
+}*/
+
+/* No la voy a incluir en el fichero init-db.sql
 
 function crear_tabla_pista($con){
 	mysqli_query($con, "create table if not exists pista(
@@ -27,14 +37,17 @@ function crear_tabla_pista($con){
     rellenar_tabla_pistas($con);
 }
 
+La voy a incluir en el fichero init-db.sql
+
 function crear_tabla_usuario($con){
 	mysqli_query($con, "create table if not exists usuario(
 	id_usuario int auto_increment primary key,
     nombre varchar(100),
 	pass varchar(255),
 	tipo int);");
-    crear_admin($con);
+    crear_admin($con); ACA INCLUYE LA FUNCION DE CREACION DEL ADMIN, YO LO CREO DIRECTAMENTE DESDE INIT-DB
 }
+La voy a incluir en el fichero init-db.sql
 
 function crear_tabla_reserva($con){
 	mysqli_query($con, "create table if not exists reserva(
@@ -44,8 +57,9 @@ function crear_tabla_reserva($con){
     turno int,
     foreign key (usuario) references usuario(id_usuario),
     foreign key (pista) references pista(id_pista));");
-}
+}*/
 
+/* No la voy a incluir en el fichero init-db.sql
 function rellenar_tabla_pistas($con){
 	$resultado = obtener_pistas($con);
 	if(obtener_num_filas($resultado)==0){
@@ -56,8 +70,9 @@ function rellenar_tabla_pistas($con){
 			mysqli_stmt_execute($stmt);
 		}
 	}
-}
+}*/
 
+/* YO LO CREO DIRECTAMENTE DESDE INIT-DB--- SE USARÁ PARA ALGO MÁS?
 function crear_admin($con){
 	$resultado = existe_admin($con);
 	if(obtener_num_filas($resultado)==0){
@@ -68,7 +83,7 @@ function crear_admin($con){
 		mysqli_stmt_bind_param($stmt, "ssi", $admin_name, $password, $admin_type);
 		mysqli_stmt_execute($stmt);
 	}
-}
+}*/ 
 
 function existe_admin($con){
 	$result = mysqli_query($con, "select * from usuario where tipo=0");
@@ -150,7 +165,7 @@ function obtener_usuario($con, $id){
 //////////////////////////////////////////////
 //////////////////////////////////////////////
 
-function crear_pista($con, $nombre){
+/*function crear_pista($con, $nombre){
 	$stmt = mysqli_prepare($con, "insert into pista(nombre) values(?);");
 	mysqli_stmt_bind_param($stmt, "s", $nombre);
 	mysqli_stmt_execute($stmt);
@@ -180,7 +195,7 @@ function obtener_pistas($con){
 function obtener_pista($con, $id){
 	$result = mysqli_query($con, "select * from pista where id_pista = $id");
 	return $result;
-}
+}*/
 
 //////////////////////////////////////////////
 //////////////////////////////////////////////
