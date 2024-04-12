@@ -1,3 +1,9 @@
+<?php
+session_start();
+// require("database.php");
+// $con = conectar();
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,11 +13,7 @@
 	<title>Seyfert</title>
 </head>
 <body>
-<?php
-session_start();
-// require("database.php");
-// $con = conectar();
-?>
+
 <header>
     <nav class="navegacion">
     	<div class="navegacion_contenido">

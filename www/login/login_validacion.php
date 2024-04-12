@@ -2,7 +2,7 @@
 require_once ("../database.php");
 
 if(isset($_POST['login'])){
-	$usuario = login($con, $_POST['username'], $_POST['password']);
+	 $usuario = login($con, $_POST['username'], $_POST['password']);
 	if(empty($usuario)){
 		echo "Las credenciales introducidas no son correctas.";
 	}
