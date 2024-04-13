@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once ("../database.php");
+require_once ("database.php");
 
 $nombre = $_POST["nombre"];
 $email = $_POST["mail"];
@@ -46,4 +46,3 @@ if(isset($_POST["registro"]))
 
 
 
-?>

@@ -246,4 +246,3 @@ function obtener_mis_reservas($con, $id){
 		where usuario = $id and reserva.pista = pista.id_pista");
 	return $result;
 }
-?>
