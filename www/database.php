@@ -6,10 +6,7 @@ $pass = "password";
 $db_name = "grupo14";
 $db_port = 3306;
 
-//$host = "localhost";
-//$user = "root";
-//$password = "root";
-//$db_name = "padel";
+
 
 $con;
 
