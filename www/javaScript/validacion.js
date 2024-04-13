@@ -86,7 +86,7 @@ let validacion = true;
 
  if (!ValidaEmail(mail) ) {
 
-  let contenido_email = document.getElementById("mail_login");
+  let contenido_email = document.getElementById("email_login");
   let parrafo = document.createElement('p');
   contenido_email.appendChild(parrafo);
   parrafo.innerHTML = "<p style='color:#F5E644'>Usuario no válido " + mail +" debe contener un @</p>";
