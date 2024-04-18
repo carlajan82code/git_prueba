@@ -8,15 +8,9 @@ $db_port = 3306;
 
 
 
-$con;
-
 function conectar(){
-	$con = mysqli_connect($GLOBALS["host"], $GLOBALS["user"], $GLOBALS["pass"], $GLOBALS["db_port"]) or die("Error al conectar con la base de datos");
-	//crear_bdd($con);
+	$con = mysqli_connect($GLOBALS["host"], $GLOBALS["user"], $GLOBALS["pass"], $GLOBALS["db_name"], $GLOBALS["db_port"]) or die("Error al conectar con la base de datos");
 	mysqli_select_db($con, $GLOBALS["db_name"]);
-	//crear_tabla_pista($con);
-	//crear_tabla_usuario($con);
-	//crear_tabla_reserva($con);
 	return $con;
 }
 
@@ -91,19 +85,18 @@ function obtener_num_filas($resultado){
 	return mysqli_num_rows($resultado);
 }
 
-function login($con, $username, $password){
-	$stmt = mysqli_prepare($con, "select * from usuario where nombre=?;");
-	mysqli_stmt_bind_param($stmt, "s", $username);
-	mysqli_stmt_execute($stmt);
-	$result = mysqli_stmt_get_result($stmt);
-	if(obtener_num_filas($result)>0){
-		$datosUsuario = mysqli_fetch_array($result);
-		if(password_verify($password, $datosUsuario['pass'])){
-			return $datosUsuario;
-		}
-		return false;
-	}
-	return false;
+function login($con, $mail, $contrasena){
+	$con=conectar();
+	$hash_contrasena = hash("sha512", $contrasena);
+    $stmt = $con->prepare("SELECT *
+                        FROM usuario
+                        WHERE mail=?
+                        AND pass =?;");
+    $stmt->bind_param("ss", $mail, $hash_contrasena);
+    $stmt->execute();
+    $usuario = $stmt->get_result();
+    cerrar_conexion($con);
+    return mysqli_fetch_array($usuario);
 
 	/** VALIDACIÓN AQUI */
 }

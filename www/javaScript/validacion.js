@@ -107,8 +107,8 @@ let validacion = true;
 }, 7000);
 
 if ( (ValidaEmail(mail))&& (ValidarPassword(password)))
-{  // si la validacion es correcta redirecciona a enrutador.php para validacion php//
-  alert("En contruccion");
+{  // si la validacion es correcta redirecciona a validacion_login para validacion php//
+  location.href="validacion_login.php";
   
 }
 
