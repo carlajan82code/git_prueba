@@ -31,7 +31,7 @@ let validacion = true;
       let parrafo = document.createElement('p');
       contenido_nombre.appendChild(parrafo);
       parrafo.innerHTML = "<p style='color:#F5E644'>Nombre debe estar completo</p>";
-      validacion = false;
+       validacion = false;
     }
 
     if (!ValidaEmail(mail)) 
