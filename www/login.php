@@ -18,11 +18,7 @@
         <div class="form_contenedor">
             <div class="form_input" id="email_login">
                 <label for="email">Email</label>
-<<<<<<< HEAD
                 <input type="email" class="form-control" placeholder="email" name="email" id="mail" tabindex="1">
-=======
-                <input type="email" class="form-control" placeholder="email" name="mail" id="mail">
->>>>>>> fcca4aaa9b69cb02fc78edfc2baa2597bb4f46b9
             </div>
             <div class="form_input" id="pass_login">
                 <label for="contrasena">Contraseña</label>
