@@ -14,15 +14,15 @@
 
     ?>
 
-    <form method="post" action="./login_validacion.php" class="form_login ">
+    <form method="post" action="./login/login_validacion.php" class="form_login ">
         <div class="form_contenedor">
-            <div class="form_input" id="nombre_registro">
+            <div class="form_input" id="email_login">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" placeholder="email" name="nombre" id="mail">
+                <input type="email" class="form-control" placeholder="email" name="mail" id="mail" tabindex="1">
             </div>
-            <div class="form_input" id="email_registro">
+            <div class="form_input" id="pass_login">
                 <label for="contrasena">Contraseña</label>
-                <input type="password" class="form-control" placeholder="Introduzca password" name="contrasena" id="contrasena">
+                <input type="password" class="form-control" placeholder="Introduzca password" name="contrasena" id="contrasena" tabindex="2">
             </div>
 
             <div>

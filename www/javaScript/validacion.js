@@ -31,7 +31,7 @@ let validacion = true;
       let parrafo = document.createElement('p');
       contenido_nombre.appendChild(parrafo);
       parrafo.innerHTML = "<p style='color:#F5E644'>Nombre debe estar completo</p>";
-      validacion = false;
+       validacion = false;
     }
 
     if (!ValidaEmail(mail)) 
@@ -86,7 +86,7 @@ let validacion = true;
 
  if (!ValidaEmail(mail) ) {
 
-  let contenido_email = document.getElementById("mail_login");
+  let contenido_email = document.getElementById("email_login");
   let parrafo = document.createElement('p');
   contenido_email.appendChild(parrafo);
   parrafo.innerHTML = "<p style='color:#F5E644'>Usuario no válido " + mail +" debe contener un @</p>";
@@ -107,8 +107,8 @@ let validacion = true;
 }, 7000);
 
 if ( (ValidaEmail(mail))&& (ValidarPassword(password)))
-{  // si la validacion es correcta redirecciona a enrutador.php para validacion php//
-  alert("En contruccion");
+{  // si la validacion es correcta redirecciona a validacion_login para validacion php//
+  location.href="validacion_login.php";
   
 }
 

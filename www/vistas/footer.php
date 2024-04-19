@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <footer class="footer">
 
 	<div class="footer_contenido">
@@ -22,5 +23,6 @@
 	
 		<!-- Incluir iconos RRSS -->
 	</div>
-
 </footer>
+</body>
+</html>

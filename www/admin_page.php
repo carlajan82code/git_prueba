@@ -1,14 +1,13 @@
 <?php
-require_once("includes/header.php");
+session_start();
+include_once("./vistas/header.php");
 require_once("database.php");
 $con = conectar();
 
-//GESTIÓN USUARIOS
+// //GESTIÓN USUARIOS
 require_once("gestion_usuarios.php");
 
-//GESTION PISTAS
-require_once("gestion_pistas.php");
-
-//GESTION RESERVAS
+// //GESTION RESERVAS
 require_once("gestion_reservas.php");
+include_once("./vistas/footer.php");
 ?>
