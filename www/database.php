@@ -193,49 +193,49 @@ function obtener_pista($con, $id){
 //////////////////////////////////////////////
 //////////////////////////////////////////////
 
-function crear_reserva($con, $usuario, $pista, $turno){
-	$disponible = comprobar_disponibilidad($con, $pista, $turno);
-	if($disponible == true){
-		$stmt = mysqli_prepare($con, "insert into reserva(usuario, pista, turno) values(?, ?, ?);");
-		mysqli_stmt_bind_param($stmt, "iii", $usuario, $pista, $turno);
-		$resultado = mysqli_stmt_execute($stmt);
-		return $resultado;
-	}
-	return false;
-}
+// function crear_reserva($con, $usuario, $turno){
+// 	$disponible = comprobar_disponibilidad($con, $pista, $turno);
+// 	if($disponible == true){
+// 		$stmt = mysqli_prepare($con, "insert into reserva(usuario, pista, turno) values(?, ?, ?);");
+// 		mysqli_stmt_bind_param($stmt, "iii", $usuario, $pista, $turno);
+// 		$resultado = mysqli_stmt_execute($stmt);
+// 		return $resultado;
+// 	}
+// 	return false;
+// }
 
-function comprobar_disponibilidad($con, $pista, $turno){
-	$result = mysqli_query($con, "select * from reserva where pista = $pista and turno = $turno");
-	$reserva = mysqli_fetch_array($result);
-	if($reserva){
-		return false;
-	}
-	return true;
-}
+// function comprobar_disponibilidad($con, $pista, $turno){
+// 	$result = mysqli_query($con, "select * from reserva where pista = $pista and turno = $turno");
+// 	$reserva = mysqli_fetch_array($result);
+// 	if($reserva){
+// 		return false;
+// 	}
+// 	return true;
+// }
 
-function borrar_reservas($con, $codigos){
-	$consulta = "delete from reserva where id_reserva in (";
-	foreach($codigos as $codigo){
-		$consulta = $consulta.$codigo.", ";
-	}
-	$consulta = $consulta."0)";
-	mysqli_query($con, $consulta);
-}
+// function borrar_reservas($con, $codigos){
+// 	$consulta = "delete from reserva where id_reserva in (";
+// 	foreach($codigos as $codigo){
+// 		$consulta = $consulta.$codigo.", ";
+// 	}
+// 	$consulta = $consulta."0)";
+// 	mysqli_query($con, $consulta);
+// }
 
-function borrar_todas_reservas($con){
-	$consulta = "delete from reserva";
-	mysqli_query($con, $consulta);
-}
+// function borrar_todas_reservas($con){
+// 	$consulta = "delete from reserva";
+// 	mysqli_query($con, $consulta);
+// }
 
-function obtener_reservas($con){
-	$result = mysqli_query($con, "select r.id_reserva, u.nombre, p.nombre as nombre_pista, r.turno
-		from reserva r, pista p, usuario u
-		where r.usuario = u.id_usuario and r.pista = p.id_pista");
-	return $result;
-}
+// function obtener_reservas($con){
+// 	$result = mysqli_query($con, "select r.id_reserva, u.nombre, p.nombre as nombre_pista, r.turno
+// 		from reserva r, pista p, usuario u
+// 		where r.usuario = u.id_usuario and r.pista = p.id_pista");
+// 	return $result;
+// }
 
-function obtener_mis_reservas($con, $id){
-	$result = mysqli_query($con, "select id_reserva, usuario, nombre, turno from reserva, pista
-		where usuario = $id and reserva.pista = pista.id_pista");
-	return $result;
-}
+// function obtener_mis_reservas($con, $id){
+// 	$result = mysqli_query($con, "select id_reserva, usuario, nombre, turno from reserva, pista
+// 		where usuario = $id and reserva.pista = pista.id_pista");
+// 	return $result;
+// }
