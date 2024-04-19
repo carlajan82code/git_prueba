@@ -3,17 +3,17 @@ session_start();
 require_once ("../database.php");
 
 $registro = $_POST['registro'];
-$email = $_POST['email'];
+$mail = $_POST['mail'];
 $nombre = $_POST['nombre'];
 $contrasena = $_POST['contrasena'];
 $conf_contrasena = $_POST['conf_contrasena'];
 
-if(!isset($registro) || !isset($email) || !isset($contrasena) || !isset($conf_contrasena) || !isset($nombre)){
+if(!isset($registro) || !isset($mail) || !isset($contrasena) || !isset($conf_contrasena) || !isset($nombre)){
 	echo "Campos incompletos";
 	die;
 }
 
-if (!validaEmail($email) || !validaContrasena($contrasena)){
+if (!validaEmail($mail) || !validaContrasena($contrasena)){
 	echo "Los campos introducidos no son validos.";
 	die;
 }
@@ -30,9 +30,9 @@ if (!$resultado) {
     echo "No se pudo crear el usuario";
 }
 
-function validaEmail($email){
+function validaEmail($mail){
 	$emailRegex = '/^[^\s@]+@[^\s@]+\.[^\s@]+$/';
-	return preg_match($emailRegex, $email);
+	return preg_match($emailRegex, $mail);
 }
 
 function validaContrasena($contrasena){

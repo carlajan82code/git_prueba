@@ -11,7 +11,7 @@
         require_once("./vistas/header.php");
 
     ?>
-<form method="post" action="registro_validacion.php" class="form_registro">
+<form method="post" action="registro/registro_validacion.php" class="form_registro">
     <div class="form_contenedor">
     <div class="form_input" id="nombre_registro">
         <label for="nombre">Nombre de usuario</label>
