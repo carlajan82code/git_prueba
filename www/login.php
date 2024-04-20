@@ -32,9 +32,8 @@
     </form>
 
     <?php
-        require_once("./vistas/footer.php");
-
-?>
+ require_once ("./vistas/footer.php");
+   ?>
 
     <script src="./javaScript/validacion.js"></script>
 </body>
