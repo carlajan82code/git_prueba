@@ -34,13 +34,13 @@ session_start();
 
 	</div> <!-- Backgroung Imagen Luna -->
 
-	<footer class="footer">
+	
 
    <?php
  require_once ("./vistas/footer.php");
    ?>
 
-	</footer>
+	
 
 
 </body>
