@@ -134,12 +134,18 @@
 
 
 /** Footer logo redes sociales*/
-.footer_redes {
 
-    /* background-color:var(--blanco); */
-    display: flex;
+    .footer_redes {
 
-}
+        /* background-color:var(--blanco); */
+        gap: 3px;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        cursor: pointer;
+    
+    }
+
 
 
 .copi_footer {
