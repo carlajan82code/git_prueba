@@ -69,6 +69,7 @@
 .navegacion_contenido--boton:hover{
     background-color: var(--blanco);
     color: var(--color_boton);
+    cursor: pointer;
 }
 
 /** Background Imagen Luna */
@@ -186,6 +187,7 @@ color: var(--blanco);
     border-radius: 5px;
     color: var(--blanco);
     background-color: var(--color_boton);
+    cursor: pointer;
 }
 
 .boton_separacion{
