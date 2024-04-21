@@ -16,7 +16,7 @@ session_start();
 
 <body>
 
-<header>
+<header class="header">
     <nav class="navegacion">
     	<div class="navegacion_contenido">
         	<a href="./index.php"><img src="img/Seyfert.png" alt="logo Seyfert" width="150px"></a>

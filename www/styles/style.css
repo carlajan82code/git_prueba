@@ -1,62 +1,70 @@
-:root{
+:root {
 
     --colorNavegacion: #212529;
     --grisOscuro: #212529;
-    --gris: #c0c1c3; 
+    --gris: #c0c1c3;
     --blanco: #fff;
     --azulTierra: #1c305c;
     --color_boton: #0d6efd;
     --colorNaranja: #db6101;
 
 }
+
 /** Globales */
-*{
+* {
     margin: 0px;
     padding: 0px;
-    font-size:large;
-    
+    font-size: large;
+
 
 }
+
 /** Bloque Navegacion */
 
-.navegacion{
-    
-    background-color: var(--colorNavegacion);
-    padding: 10px;
-   
+.header {
+    max-width: 1600px;
+    width: auto;
 }
 
-.navegacion_contenido{
+.navegacion {
+
+    background-color: var(--colorNavegacion);
+    max-width: 1600px;
+    padding: 10px;
+
+}
+
+.navegacion_contenido {
     display: flex;
     gap: 10px;
 
 }
 
-.navegacion_contenido--enlace{
+.navegacion_contenido--enlace {
     text-decoration: none;
     color: var(--gris);
 }
 
-.enlaces-nav{
+.enlaces-nav {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.navegacion_contenido--enlace:hover{
+.navegacion_contenido--enlace:hover {
     color: white;
 }
 
-.enlaces-nav__boton{
-   
+.enlaces-nav__boton {
+
     display: flex;
     align-items: center;
     gap: 5px;
     margin-left: 900px;
-   
+
 }
 
-.navegacion_contenido--boton{
+.navegacion_contenido--boton {
     text-decoration: none;
     text-transform: uppercase;
     color: var(--blanco);
@@ -66,14 +74,14 @@
     border-radius: 5px;
 }
 
-.navegacion_contenido--boton:hover{
+.navegacion_contenido--boton:hover {
     background-color: var(--blanco);
     color: var(--color_boton);
 }
 
 /** Background Imagen Luna */
 
-.bg-luna{
+.bg-luna {
     background-image: url(../img/Luna.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -83,27 +91,27 @@
 
 /** Footer */
 
-.footer{
+.footer {
     background-color: var(--blanco);
     display: flex;
-    display:inline;
-   
+    display: inline;
+
 }
 
-.footer_contenido{
+.footer_contenido {
     margin-top: 70px;
     display: flex;
     gap: 490px;
     /* gap: 550px; */
     padding: 0%;
-    
+
 }
 
-.footer_cotenido-logo{
+.footer_cotenido-logo {
     margin-left: 40px;
 }
 
-.footer_contenido-contacto{
+.footer_contenido-contacto {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -111,13 +119,13 @@
     align-items: center;
 }
 
-.footer_contenido-contacto h2{
+.footer_contenido-contacto h2 {
     text-transform: uppercase;
     font-weight: bold;
 }
 
-span{
-    
+span {
+
     content: '';
     display: block;
     height: 0.5px;
@@ -126,26 +134,26 @@ span{
 
 
 /** Footer logo redes sociales*/
-.footer_redes{
- 
+.footer_redes {
+
     /* background-color:var(--blanco); */
-     gap: 3px; 
-     width:35px; 
-     height:35px;
-     display: flex;
-     cursor:pointer;
-   
+    gap: 3px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    cursor: pointer;
+
 }
 
 
-.copi_footer{
+.copi_footer {
 
-display: flex;
-align-items: center;
-justify-content: center;
-padding: 15px;
-background-color: var(--colorNavegacion);
-color: var(--blanco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: var(--colorNavegacion);
+    color: var(--blanco);
 }
 
 
@@ -153,58 +161,58 @@ color: var(--blanco);
 
 /** Formulario Registro */
 
-.form_registro{
+.form_registro {
     background-color: #212529;
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
-.form_contenedor{
+.form_contenedor {
     width: 600px;
     margin: auto;
 }
 
-.form_input{
+.form_input {
     display: flex;
     flex-direction: column;
     gap: 7px;
     margin-bottom: 10px;
 }
 
-.form_input label{
+.form_input label {
     color: var(--blanco);
 }
 
-.form_input input{
+.form_input input {
     padding: 8px;
     border-radius: 5px;
 }
 
-.boton_registro{
+.boton_registro {
     padding: 9px;
     border-radius: 5px;
     color: var(--blanco);
     background-color: var(--color_boton);
 }
 
-.boton_separacion{
-margin-top: 9px;
-padding: 0 0 10px 0;
+.boton_separacion {
+    margin-top: 9px;
+    padding: 0 0 10px 0;
 
 }
 
-.boton_separacion p{
+.boton_separacion p {
     color: var(--blanco);
 }
 
-.boton_separacion a{
+.boton_separacion a {
     color: var(--color_boton);
 }
 
 /** Login */
 
-.form_login{
+.form_login {
 
     background-color: #212529;
     padding: 0 0 20px 0;
@@ -212,16 +220,19 @@ padding: 0 0 10px 0;
 }
 
 /** BLOG */
-.blog{
-    width: 1000px;
+.blog {
+    max-width: 1000px;
+    width: auto;
     margin: auto;
+
+
 }
 
-.blog-contenido{
+.blog-contenido {
     margin-top: 40px;
 }
 
-.blog-contenido h2{
+.blog-contenido h2 {
     text-align: center;
     margin-bottom: 30px;
 }
@@ -230,29 +241,29 @@ padding: 0 0 10px 0;
     display: flex;
     gap: 10px;
     margin-bottom: 40px;
-    
+
 }
 
 .entrada-blog:last-child {
     margin-bottom: 0;
-    
+
 }
 
-.entrada-imagen{
+.entrada-imagen {
     width: 200px;
     margin-left: 30px;
     border-radius: 10px;
 
 }
- 
 
-.texto-entrada--titulo{
+
+.texto-entrada--titulo {
     margin-bottom: 20px;
     line-height: 1.2;
     color: var(--color_boton);
 }
 
-.texto-entrada--titulo:after{
+.texto-entrada--titulo:after {
     content: '';
     display: block;
     width: 150px;
@@ -262,37 +273,73 @@ padding: 0 0 10px 0;
 
 }
 
-.texto-entrada--p{
+.texto-entrada--p {
     color: var(--colorNavegacion);
     display: flex;
     margin-bottom: 10px;
-    
+
 }
 
-.texto-entrada--parrafo{
+.texto-entrada--parrafo {
     color: var(--colorNavegacion);
     margin-bottom: 30px;
-    
+
 }
 
-.texto-entrada--span{
+.texto-entrada--span {
     background: var(--blanco);
     color: var(--colorNaranja);
 }
 
-.texto-entrada--boton{
+.texto-entrada--boton {
     padding: 10px;
     text-decoration: none;
     background-color: #102963;
     color: var(--blanco);
     border-radius: 5px;
-    
+
 }
-.icono-whatsapp{
+
+.icono-whatsapp {
     padding: 2px;
 }
 
-.icono-twitter{
+.icono-twitter {
     padding: 2px;
 }
 
+
+
+
+
+
+@media (max-width: 1000px) {
+    .entrada-blog {
+        flex-direction: column;
+        margin-bottom: 40px;
+        align-items: left;
+        
+
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .navegacion{
+        width: auto;
+    }
+    .navegacion_contenido {
+        flex-direction: column;
+        align-items: center; 
+        gap: 10px;
+
+    }
+
+    .enlaces-nav{
+        flex-direction: column;
+    }
+
+   
+
+}
