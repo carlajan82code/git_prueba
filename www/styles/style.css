@@ -8,9 +8,10 @@
     --color_boton: #0d6efd;
 
 }
-
+/** Globales */
 *{
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
     font-size:large;
     
 
