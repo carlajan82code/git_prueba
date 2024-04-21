@@ -18,7 +18,7 @@
         <div class="form_contenedor">
             <div class="form_input" id="email_login">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" placeholder="email" name="mail" id="mail" tabindex="1">
+                <input type="email" class="form-control" placeholder="email" name="email" id="mail" tabindex="1">
             </div>
             <div class="form_input" id="pass_login">
                 <label for="contrasena">Contraseña</label>
@@ -32,9 +32,8 @@
     </form>
 
     <?php
-        require_once("./vistas/footer.php");
-
-?>
+ require_once ("./vistas/footer.php");
+   ?>
 
     <script src="./javaScript/validacion.js"></script>
 </body>
