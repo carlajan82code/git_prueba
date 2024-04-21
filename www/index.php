@@ -17,7 +17,7 @@ session_start();
 <header>
     <nav class="navegacion">
     	<div class="navegacion_contenido">
-        	<a href="./index.php"><img src="img/Seyfert.png" alt="logo Seyfert" width="150px"></a>
+        	<a href="/index.php"><img src="img/Seyfert.png" alt="logo Seyfert" width="150px"></a>
 
 			<div class="enlaces-nav">
             	<a class="navegacion_contenido--enlace" href="registro.php">Registrarse</a>
@@ -25,6 +25,11 @@ session_start();
 			</div>
            
         </div>
+
+		<div>
+			<a href="/blog.php">Blog</a>
+
+		</div>
     </nav>
 </header>
 
