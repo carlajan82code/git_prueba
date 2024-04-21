@@ -103,14 +103,17 @@
 
 }
 
+
+
+
+
 .footer_contenido {
+    margin-top: 70px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 1600px;
-    gap: 50px;
-    
+    gap: 490px;
+    /* gap: 550px; */
+    padding: 0%;
+
 }
 
 .footer_cotenido-logo {
