@@ -1,7 +1,7 @@
 $(document).ready(iniciar());
 function iniciar() {
 $("#slider").slick({
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 1200, // velocidad de movimiento
     autoplay: true,
@@ -13,3 +13,5 @@ $("#slider").slick({
     pauseOnHover: false
 });
 }
+
+  

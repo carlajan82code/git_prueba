@@ -1,5 +1,5 @@
 <?php
-require_once("vistas/header.php");?>
+require_once("vistas/header.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,18 +13,19 @@ require_once("vistas/header.php");?>
     <title>Document</title>
 
 </head>
+
 <body>
-<section class="centrar">
-            <div class="contenedorSlider">
-                <div id="slider">
-                    <div><img class="imagen" src="img/slide1.jpg"></div>
-                    <div><img class="imagen" src="img/slide2.jpg"></div>
-                    <div><img class="imagen" src="img/slide3.jpg"></div>
-                    <div><img class="imagen" src="img/slide4.jpg"></div>    
-                </div>
+    <section class="centrar">
+        <div class="contenedorSlider">
+            <div id="slider">
+                <div><img class="imagen" src="img/slide1.jpg"></div>
+                <div><img class="imagen" src="img/slide2.jpg"></div>
+                <div><img class="imagen" src="img/slide3.jpg"></div>
+                <div><img class="imagen" src="img/slide4.jpg"></div>
             </div>
-</section>
-<script src='javaScript/galeria.js'></script>
+        </div>
+    </section>
+    <script src='javaScript/galeria.js'></script>
 </body>
 
 <?php require_once("vistas/footer.php");

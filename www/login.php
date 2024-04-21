@@ -10,7 +10,7 @@
 
 <body>
     <?php
-        require_once("./vistas/header.php");
+    require_once("./vistas/header.php");
 
     ?>
 
@@ -32,8 +32,8 @@
     </form>
 
     <?php
- require_once ("./vistas/footer.php");
-   ?>
+    require_once("./vistas/footer.php");
+    ?>
 
     <script src="./javaScript/validacion.js"></script>
 </body>

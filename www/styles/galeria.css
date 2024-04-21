@@ -1,3 +1,8 @@
 .imagen { /*Falta agregar mediaqueries para pantallas gigantes, grandes, o mobiles*/
     height: 800px;
+    margin: 10px;
+}
+
+.centrar{
+    background-color: rgb(204, 202, 202);
 }
