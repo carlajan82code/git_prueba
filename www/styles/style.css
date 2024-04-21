@@ -6,6 +6,7 @@
     --blanco: #fff;
     --azulTierra: #1c305c;
     --color_boton: #0d6efd;
+    --colorNaranja: #db6101;
 
 }
 /** Globales */
@@ -46,6 +47,30 @@
     color: white;
 }
 
+.enlaces-nav__boton{
+   
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 900px;
+   
+}
+
+.navegacion_contenido--boton{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--blanco);
+    padding: 8px 16px 8px 16px;
+    background-color: var(--color_boton);
+    border: 2px solid var(--grisOscuro);
+    border-radius: 5px;
+}
+
+.navegacion_contenido--boton:hover{
+    background-color: var(--blanco);
+    color: var(--color_boton);
+}
+
 /** Background Imagen Luna */
 
 .bg-luna{
@@ -69,10 +94,9 @@
     margin-top: 70px;
     display: flex;
     gap: 490px;
+    /* gap: 550px; */
     padding: 0%;
     
-    
-   
 }
 
 .footer_cotenido-logo{
@@ -187,6 +211,83 @@ padding: 0 0 10px 0;
 
 }
 
+/** BLOG */
+.blog{
+    width: 1000px;
+    margin: auto;
+}
+
+.blog-contenido{
+    margin-top: 40px;
+}
+
+.blog-contenido h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.entrada-blog {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 40px;
+    
+}
+
+.entrada-blog:last-child {
+    margin-bottom: 0;
+    
+}
+
+.entrada-imagen{
+    width: 200px;
+    margin-left: 30px;
+    border-radius: 10px;
+
+}
+ 
+
+.texto-entrada--titulo{
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: var(--color_boton);
+}
+
+.texto-entrada--titulo:after{
+    content: '';
+    display: block;
+    width: 150px;
+    height: 5px;
+    background: var(--color_boton);
+    margin-top: 10px;
+
+}
+
+.texto-entrada--p{
+    color: var(--colorNavegacion);
+    display: flex;
+    margin-bottom: 10px;
+    
+}
+
+.texto-entrada--parrafo{
+    color: var(--colorNavegacion);
+    margin-bottom: 30px;
+    
+}
+
+.texto-entrada--span{
+    background: var(--blanco);
+    color: var(--colorNaranja);
+}
+
+.texto-entrada--boton{
+    padding: 10px;
+    text-decoration: none;
+    background-color: #102963;
+    color: var(--blanco);
+    border-radius: 5px;
+    
+}
 .icono-whatsapp{
     padding: 2px;
 }
