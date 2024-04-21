@@ -86,11 +86,25 @@
 </div>
 
 
+<footer class="footer">
 
+	<div class="footer_contenido--blog">
+		<div class=footer_cotenido-logo>
+			<img src="./img/seyfertDark.png" alt="logo Seyfert Footer" width="150px">
+		</div>
+		
 
-  <?php
-  include_once ("./vistas/footer.php");
-?>
+    </div>
+
+	<div class="copy_foooter--blog">
+		<p>Copyright @ <?php echo date("Y"); ?> All rights reserved by: SEYFERT</p>
+	</div>
+</footer>
+
+</body>
+
+</html>
+
 
 
 

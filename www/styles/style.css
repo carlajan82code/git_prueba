@@ -29,7 +29,7 @@
 .navegacion {
 
     background-color: var(--colorNavegacion);
-    max-width: 1600px;
+    width: 1600px;
     padding: 10px;
 
 }
@@ -94,18 +94,23 @@
 
 .footer {
     background-color: var(--blanco);
+    max-width: 1600px;
+    width: auto;
     display: flex;
-    display: inline;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
 
 }
 
 .footer_contenido {
-    margin-top: 70px;
     display: flex;
-    gap: 490px;
-    /* gap: 550px; */
-    padding: 0%;
-
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 1600px;
+    gap: 50px;
+    
 }
 
 .footer_cotenido-logo {
@@ -115,7 +120,6 @@
 .footer_contenido-contacto {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     margin-bottom: 30px;
     align-items: center;
 }
@@ -125,33 +129,20 @@
     font-weight: bold;
 }
 
-span {
-
-    content: '';
-    display: block;
-    height: 0.5px;
-    background-color: grey;
-}
-
 
 /** Footer logo redes sociales*/
 .footer_redes {
 
     /* background-color:var(--blanco); */
-    gap: 3px;
-    width: 35px;
-    height: 35px;
     display: flex;
-    cursor: pointer;
 
 }
 
 
 .copi_footer {
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    width: 1600px;
     padding: 15px;
     background-color: var(--colorNavegacion);
     color: var(--blanco);
@@ -312,17 +303,59 @@ span {
 
 
 
+.footer_contenido--blog{
+    text-align: center;
+}
 
+.copy_foooter--blog{
+    text-align: center;
+    width: 1600px;
+    padding: 15px;
+    background-color: var(--colorNavegacion);
+    color: var(--blanco);
+    height: 25px;
+}
 
 
 @media (max-width: 1000px) {
     .entrada-blog {
         flex-direction: column;
         margin-bottom: 40px;
-        align-items: left;
+        align-items: center;
         
+    }
+    .texto-entrada{
+        text-align: center;
+    }
+
+    .texto-entrada--titulo{
+        text-align: center;
+    }
+
+    .texto-entrada--p{
+        justify-content: center;
+    }
+
+    .texto-entrada--titulo:after {
+        content: '';
+        display: block;
+        width: 150px;
+        height: 5px;
+        background: var(--color_boton);
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer_contenido-contacto{
+        width: auto;
+    }
+
+    .copy_foooter--blog{
+        width: 1000px;
 
     }
+
 }
 
 
@@ -342,6 +375,14 @@ span {
         flex-direction: column;
     }
 
+    .copy_foooter--blog{
+        width: 1000px;
+
+    }
+
+    .blog-contenido{
+        text-align: center;
+    }
    
 
 }

@@ -14,22 +14,14 @@
 		</div>
 		<!--  iconos RRSS -->
 		<div class="footer_redes">
-			<img src="./img/instagram.svg" alt="red Instragram" href="">
-			<img src="./img/twiter.svg" alt="red twiter" class="icono-twitter">
-			<img src="./img/linkedin.svg" alt="red linkedin">
-			<img src="./img/whatsapp.svg" alt="red whatsapp" class="icono-whatsapp">
+		
 
 		</div>
 
 	</div>
 
-	<!-- Incluir una Linea -->
-	<span>
-
-	</span>
-
-	<div class="copi_footer">
-		<p>Copyright @<?php echo date("Y"); ?> All rights reserved by: SEYFERT</p>
+	<div class="copi_footer--blog">
+		<p>Copyright @ <?php echo date("Y"); ?> All rights reserved by: SEYFERT</p>
 	</div>
 </footer>
 </body>
