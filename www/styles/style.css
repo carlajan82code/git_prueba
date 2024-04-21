@@ -93,10 +93,9 @@
     margin-top: 70px;
     display: flex;
     gap: 490px;
+    /* gap: 550px; */
     padding: 0%;
     
-    
-   
 }
 
 .footer_cotenido-logo{
