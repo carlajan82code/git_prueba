@@ -11,7 +11,7 @@ VALUES ('Usuario', 'usuario@seyfert.com', '14a829ab43fef85e40e115f6aea369ee89146
 -- no incluyo la pista
 -- Creo la tabla reserva pero no le agrego valores iniciales
 
-CREATE TABLE reserva( id_reserva int auto_increment primary key, usuario int, turno int, foreign key (usuario) references usuario(id_usuario)); 
+CREATE TABLE reserva( id_reserva int auto_increment primary key, usuario int, fecha int, paquete int, precio int, foreign key (usuario) references usuario(id_usuario), foreign key (paquete) references paquete(id_paquete), foreign key (precio) references paquete(precio)); 
 
-
+CREATE TABLE paquete(id_paquete int auto_increment primary key, nombre_paquete varchar(255), precio int, descripcion varchar (500));
 
