@@ -112,4 +112,9 @@ if ( (ValidaEmail(mail))&& (ValidarPassword(password)))
   
 }
 
- }
+}
+
+/* ---- VALIDACION FORMULARIO DE CONTACTO ---- */
+function validar_formulario_contacto(){
+
+}
