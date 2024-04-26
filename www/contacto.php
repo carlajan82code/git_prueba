@@ -24,59 +24,58 @@
 
     <div class="container">
         <h2>Formulario de Contacto</h2>
-        <form action="contacto/contacto_validacion.php" method="post">
+        <form method="post" action="contacto/contacto_validacion.php" onsubmit="return validar_formulario_contacto()">
             <div class="form-group" id="div-nombre">
-                <label for="nombre">Primer Nombre:</label>
-                <input type="text" id="nombre" name="nombre" minlength="2" maxlength="20" tabindex="1" required>
+                <label for="nombre">Primer Nombre*:</label>
+                <input type="text" id="nombre" name="nombre" minlength="2" maxlength="20" tabindex="1">
             </div>
-            <div class="form-group">
-                <label for="apellido">Apellido:</label>
-                <input type="text" id="apellido" name="apellido" minlength="2" maxlength="20" tabindex="2" required>
+            <div class="form-group" id="div-apellido">
+                <label for="apellido">Apellido*:</label>
+                <input type="text" id="apellido" name="apellido" minlength="2" maxlength="20" tabindex="2">
             </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" minlength="2" maxlength="20" tabindex="3" required>
+            <div class="form-group" id="div-mail">
+                <label for="email">Email*:</label>
+                <input type="text" id="mail" name="email" minlength="2" maxlength="20" tabindex="3">
             </div>
-            <div class="form-group">
-                <label for="telefono">Número de Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" minlength="6" tabindex="4" required>
+            <div class="form-group" id="div-telefono">
+                <label for="telefono">Número de Teléfono*:</label>
+                <input type="tel" id="telefono" name="telefono" minlength="6" tabindex="4">
             </div>
-            <div class="form-group">
-                <label for="direccion1">Dirección 1:</label>
-                <input type="text" id="direccion1" name="direccion1" minlength="6" maxlength="50" tabindex="5" required>
+            <div class="form-group" id="div-direccion_1">
+                <label for="direccion1">Dirección 1*:</label>
+                <input type="text" id="direccion1" name="direccion1" minlength="6" maxlength="50" tabindex="5">
             </div>
-            <div class="form-group">
+            <div class="form-group" id="direccion_2">
                 <label for="direccion2">Dirección 2:</label>
                 <input type="text" id="direccion2" name="direccion2" minlength="6" maxlength="50" tabindex="6">
             </div>
-            <div class="form-group">
-                <label for="ciudad">Ciudad:</label>
-                <input type="text" id="ciudad" name="ciudad" minlength="2" maxlength="10" tabindex="7" required>
+            <div class="form-group" id="div-ciudad">
+                <label for="ciudad">Ciudad*:</label>
+                <input type="text" id="ciudad" name="ciudad" minlength="2" maxlength="10" tabindex="7">
             </div>
-            <div class="form-group">
-                <label for="estado">Estado/Provincia:</label>
-                <input type="text" id="estado" name="estado" minlength="2" maxlength="10" tabindex="8" required>
+            <div class="form-group" id="div-estado">
+                <label for="estado">Estado/Provincia*:</label>
+                <input type="text" id="estado" name="estado" minlength="2" maxlength="10" tabindex="8">
             </div>
-            <div class="form-group">
-                <label for="codigo_postal">Código Postal:</label>
-                <input type="text" id="codigo_postal" name="codigo_postal" minlength="2" maxlength="10" tabindex="9" required>
+            <div class="form-group" id="div-codigoP">
+                <label for="codigo_postal">Código Postal*:</label>
+                <input type="text" id="codigoPostal" name="codigo_postal" minlength="2" maxlength="10" tabindex="9">
             </div>
-            <div class="form-group">
-                <label for="pais">País:</label>
-                <select id="selectorPais" name="pais" required></select>
+            <div class="form-group" id="div-pais">
+                <label for="pais">País*:</label>
+                <select id="selectorPais" name="pais"></select>
             </div>
-            <div class="form-group">
-                <label for="anio_nacimiento">Año de Nacimiento:</label>
-                <select id="anio_nacimiento" name="anio_nacimiento" required></select>
+            <div class="form-group" id="div-anio">
+                <label for="anio_nacimiento">Año de Nacimiento*:</label>
+                <select id="anio_nacimiento" name="anio_nacimiento"></select>
             </div>
             <div class="form-group">
                 <label for="comentarios">Cuéntanos de ti:</label>
                 <textarea id="comentarios" name="comentarios" rows="4"></textarea>
             </div>
             <div>
-                <button type="submit" onclick="validar_formulario_contacto()" name="contacto" class="boton">Enviar</button>
+                <button type="submit" name="contacto" class="boton">Enviar</button>
             </div>
-
         </form>
     </div>
 
