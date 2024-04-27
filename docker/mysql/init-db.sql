@@ -16,4 +16,4 @@ VALUES ('Vuelta a la orbita lunar', 10000, 'Sumergete en un viaje alrededor de l
 INSERT INTO paquete(nombre_paquete, precio, descripcion)
 VALUES ('Semana de relax', 90000, 'Escapate una semana a la luna todo incluido, disfruta de exursiones, shows y mucho más');
 
-CREATE TABLE reserva( id_reserva int auto_increment primary key, usuario int, fecha date, paquete int, precio int, foreign key (usuario) references usuario(id_usuario), foreign key (paquete) references paquete(id_paquete)); 
+CREATE TABLE reserva( id_reserva int auto_increment primary key, usuario int, fecha date, paquete int, foreign key (usuario) references usuario(id_usuario), foreign key (paquete) references paquete(id_paquete)); 

@@ -70,39 +70,37 @@ function crear_usuario($con, $nombre, $pass, $tipo){
 	//return $resultado;
 }
 
+/*
 function borrar_usuario($con, $id){
     $stmt = $con->prepare("DELETE FROM usuario WHERE id_usuario = (?);");
     $stmt->bind_param("i", $id);
     $stmt->execute();
 	$stmt->close();
     cerrar_conexion($con);
-}
+}*/
 
 // ELIMINA VARIOS USUARIOS A LA VES
+function borrar_usuarios($con, $codigos){
+	$consulta = "delete from usuario where id_usuario in (";
+	foreach($codigos as $codigo){
+		$consulta = $consulta.$codigo.", ";
+	}
+	$consulta = $consulta."0)";
+	mysqli_query($con, $consulta);
+}
 
-/*function borrar_usuarios($con, $codigos){
-    // Creamos una cadena de marcadores de posición para los códigos de usuario
+/* LA QUITO PORQUE GENERA WARNINGS QUE IMPIDEN QUE LA REDIRECCIÓN FUNCIONE 
+function borrar_usuarios($con, $codigos){
     $placeholders = rtrim(str_repeat('?,', count($codigos)), ',');
-    
-    // Creamos la consulta preparada
     $consulta = "DELETE FROM usuario WHERE id_usuario IN ($placeholders)";
-    
-    // Preparamos la consulta
     $stmt = mysqli_prepare($con, $consulta);
-
-    // Vinculamos los parámetros
     $types = str_repeat('i', count($codigos)); // 'i' para entero
     $params = array_merge([$stmt, $types], $codigos);
     call_user_func_array('mysqli_stmt_bind_param', $params);
-
-    // Ejecutamos la consulta
     $resultado = mysqli_stmt_execute($stmt);
-
-    // Cerramos la consulta preparada
     mysqli_stmt_close($stmt);
-
     return $resultado;
-} */
+}*/
 
 function modificar_usuario($con, $id_usuario, $nombre, $pass, $tipo){
 	$password = password_hash($pass, PASSWORD_DEFAULT);
@@ -186,11 +184,11 @@ function obtener_paquete($con, $id){
 //////////////////////////////////////////////
 //////////////////////////////////////////////
 
- function crear_reserva($con, $usuario, $fecha, $paquete, $precio){
+ function crear_reserva($con, $usuario, $fecha, $paquete){
  	$disponible = comprobar_disponibilidad($con, $paquete, $fecha);
  	if($disponible == true){
- 		$stmt = mysqli_prepare($con, "insert into reserva(usuario, fecha, paquete, precio) values(?, ?, ?, ?);");
- 		mysqli_stmt_bind_param($stmt, "iiii", $usuario, $fecha, $paquete, $precio);
+ 		$stmt = mysqli_prepare($con, "insert into reserva(usuario, fecha, paquete) values(?, ?, ?);");
+ 		mysqli_stmt_bind_param($stmt, "iii", $usuario, $fecha, $paquete);
  		$resultado = mysqli_stmt_execute($stmt);
  		return $resultado;
  	}
@@ -244,11 +242,11 @@ function obtener_paquete($con, $id){
     return $resultado;
 }
 
- /*NO necesito aplicar una consulta preparada*/
- function borrar_todas_reservas($con){
+ /*NO necesito aplicar una consulta preparada, NO APLICAMOS EL BORRAR TODAS A LA VEZ*/
+ /*function borrar_todas_reservas($con){
  	$consulta = "delete from reserva";
  	mysqli_query($con, $consulta);
- }
+ }*/
 
 /* function obtener_reservas($con){
  	$result = mysqli_query($con, "select r.id_reserva, u.nombre, p.nombre_paquete as nombre_paquete, r.fecha
@@ -292,3 +290,4 @@ function obtener_paquete($con, $id){
     return $result;
 }
 
+?>
