@@ -1,27 +1,42 @@
 <?php
-echo "<h2>Gestión de usuarios</h2>";
+echo "<h1>Gestión de usuarios</h1>";
 $resultado = obtener_usuarios($con);
 $num_filas = obtener_num_filas($resultado);
 
-echo "<table border='1'>
+echo "<div class='contenedor-tabla'>
+	<ul class='responsive-tabla'>
 	<form method='post' action='borrarusuarios.php'>
-	<tr><td>NOMBRE</td><td>TIPO</td><td>Modificar</td><td>Borrar</td></tr>";
+	<li class='tabla-header'>
+		<div class='col col-1'>NOMBRE</div>
+		<div class='col col-2'>TIPO</div>
+		<div class='col col-3'>MODIFICAR</div>
+		<div class='col col-4'>BORRAR</div>
+	</li>";
 	while($fila = obtener_resultados($resultado)){
 		extract($fila);
-		echo "<tr><td>$nombre</td><td>";
-		if($tipo==0){
-			echo "ADMIN";
-		}
-		else{
-			echo "USER";
-		}
-		echo "</td>
-			<td><a href='modificarusuario.php?id=$id_usuario'>Modificar</a></td>
-			<td><input type='checkbox' name='borrar[]' value='$id_usuario'</td>";
+		echo "<li class='tabla-fila'>
+			<div class='col col-1' data-label='NOMBRE'>$nombre</div>
+			<div class='col col-2' data-label='TIPO'>";
+			if($tipo==0){
+				echo "ADMIN";
+			}
+			else{
+				echo "USER";
+			}
+			echo "</div>
+			<div class='col col-3' data-label='MODIFICAR'><a href='modificarusuario.php?id=$id_usuario'>Modificar</a></div>
+			<div class='col col-4' style='text-align:center;' data-label='BORRAR'><input type='checkbox' name='borrar[]' value='$id_usuario'</div>
+		</li>";
 	}
-	echo "<tr><td colspan='4' style='text-align:right'><input type='submit' value='Borrar'/></td></tr>
-	</form></table>";
-
+	echo "<li class='tabla-fila'>
+			<div class='col col-1'></div>
+			<div class='col col-2'></div>
+			<div class='col col-3'></div>
+			<div class='col col-4' style='text-align:center;' data-label='ACCIÓN'><input type='submit' value='Borrar'/></div>
+	</li>
+	</form></ul>
+	</div>";
+echo "<hr>";
 echo "<h3>Crear nuevo usuario</h3>";
 
 echo "<form method='post' action='nuevousuario.php'>
