@@ -24,10 +24,7 @@ else{
 				</li>";
 		}
 		echo "<li class='tabla-fila'>
-		<div class='col col-1'></div>
-		<div class='col col-2'></div>
-		<div class='col col-3'></div>
-		<div class='col col-4' style='text-align:center;' data-label='ACCIÓN'><input type='submit' name='Borrar' value='Borrar'/></div>
+		<div class='col col-unica' style='text-align:right; padding-right:40px;' data-label='ACCIÓN'><input type='submit' name='Borrar' value='Borrar'/></div>
 		</li>
 		</form></ul></div>";
 }

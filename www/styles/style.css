@@ -25,12 +25,6 @@ width: 100%;
 
 }
 
-h1 {
-    font-size: 26px;
-    margin: 20px 0;
-    text-align: center;
-  }
-
 /** Bloque Navegacion */
 
 .header {
@@ -407,7 +401,22 @@ h1 {
 
 }
 
-/** gestion_usuarios*/
+/** gestion_usuarios y reservas*/
+
+h1 {
+    font-size: 26px;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+h1:first-of-type {
+    margin-top: 50px;
+}
+
+hr {
+    margin: 50px 0px 50px 0px;
+    border: 1px solid #c0c1c3;
+}
 
 .contenedor-tabla {
     max-width: 1000px;
@@ -415,6 +424,7 @@ h1 {
     margin-right: auto;
     padding-left: 10px;
     padding-right: 10px;
+    text-align: center;
   }
   
   .responsive-tabla {
@@ -437,16 +447,19 @@ h1 {
       box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
     }
     .col-1 {
-      flex-basis: 45%;
+      flex-basis: 35%;
     }
     .col-2 {
-      flex-basis: 20%;
+      flex-basis: 25%;
     }
     .col-3 {
       flex-basis: 25%;
     }
     .col-4 {
-      flex-basis: 10%;
+      flex-basis: 15%;
+    }
+    .col-unica {
+        flex-basis: 100%;
     }
     
     @media all and (max-width: 767px) {
