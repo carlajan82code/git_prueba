@@ -19,14 +19,14 @@
 			<a href="https://www.instagram.com" target="_blank">
 				<img src="./img/instagram.png" alt="red Instragram" href="" width="50px"></a>
 
-				<a href="https://twitter.com" target="_blank">
-					<img src="./img/twiter.png" alt="red twiter" width="50px"></a>
+			<a href="https://twitter.com" target="_blank">
+				<img src="./img/twiter.png" alt="red twiter" width="50px"></a>
 
-					<a href="https://linkedin.com" target="_blank">
-						<img src="./img/linkedin.png" alt="red linkedin" width="50px"></a>
+			<a href="https://linkedin.com" target="_blank">
+				<img src="./img/linkedin.png" alt="red linkedin" width="50px"></a>
 
-						<a href="https://whatsapp.com" target="_blank">
-							<img src="./img/whatsapp.png" alt="red whatsapp" class="icono-whatsapp" width="50px"></a>
+			<a href="https://whatsapp.com" target="_blank">
+				<img src="./img/whatsapp.png" alt="red whatsapp" class="icono-whatsapp" width="50px"></a>
 
 		</div>
 
