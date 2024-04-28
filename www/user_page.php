@@ -18,14 +18,15 @@ $resultadoPaquete = mysqli_query($con, "SELECT * FROM paquete;");
 
     <form action="">
     <select name="select">
-       <?php
-        while ($fila = mysql_fetch_assoc($resultadoPaquete)): ?>  
-            <option value="<?php echo $fila['id_paquete']; ?>"> <?php echo $fila['nombre_paquete']; ?> </option>"  
+       <?php while ($fila = mysqli_fetch_array($resultadoPaquete)): 
+            extract ($fila);
+        ?>  
+            <option value="<?php echo $id_paquete; ?>"> <?php echo $nombre_paquete; ?> </option>  
 
         <?php
-            endwhile;
+            endwhile; 
         ?>
-        </select>
+    </select>
 
         <label>Fecha del Viaje </label>
         <input type="date" name="fecha" id="fecha">
