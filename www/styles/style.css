@@ -440,6 +440,13 @@ body {
         background-position: center;
         /* Centra la imagen de fondo */
     }
+
+    .boton_registro{
+
+    display: block;
+    margin: auto;
+
+    }
 }
 
 
@@ -453,9 +460,12 @@ body {
         /* Ajusta el tamaño de la imagen de fondo para cubrir completamente el contenedor */
         background-position: center;
 
+    }
 
+    .boton_registro{
 
-
+        display: block;
+        margin: auto;
 
     }
 }
@@ -470,6 +480,23 @@ body {
 
 
     }
+
+    .footer_cotenido-logo{
+
+        display: block;
+        margin: auto;
+
+    }
+
+    .footer_redes{
+
+        display: flex;
+        justify-content: center; /* Centra los iconos horizontalmente */
+        margin-top: 0;
+
+    }
+
+    
 }
 
 /** gestion_usuarios y reservas*/
