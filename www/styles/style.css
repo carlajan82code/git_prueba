@@ -257,7 +257,7 @@ background-color: var(--azulTierra);
 
 /** BLOG */
 .blog {
-    /** max-width: 1000px;*/
+  
     width: 100%;
     width: auto;
     margin: auto;
@@ -331,7 +331,7 @@ background-color: var(--azulTierra);
 .texto-entrada--boton {
     padding: 10px;
     text-decoration: none;
-    background-color: #102963;
+    background-color:var(--color_boton);
     color: var(--blanco);
     border-radius: 5px;
 
@@ -358,7 +358,7 @@ background-color: var(--azulTierra);
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         background-color: #111;
         color: #fff;
-        margin: 0;
+        margin: 1px;
       }
       
       header {
@@ -384,11 +384,12 @@ background-color: var(--azulTierra);
       
       .header-container {
         flex-direction: column;
-        background-image: url(../img/earth-1365995.jpg);
+        background-image: url(../img/earth.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         height: 350px;
       }
+      
       
       h1 {
         font-size: 32px;
