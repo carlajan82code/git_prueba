@@ -19,7 +19,7 @@ $resultadoPaquete = mysqli_query($con, "SELECT * FROM paquete;");
     <form action="">
     <select name="select">
        <?php
-        while ($fila = mysql_fetch_assoc($resultadoPaquete)): ?>  
+        while ($fila = mysqli_fetch_assoc($resultadoPaquete)): ?>  
             <option value="<?php echo $fila['id_paquete']; ?>"> <?php echo $fila['nombre_paquete']; ?> </option>"  
 
         <?php
@@ -27,7 +27,7 @@ $resultadoPaquete = mysqli_query($con, "SELECT * FROM paquete;");
         ?>
         </select>
 
-        <label>Fecha del Viaje </label>
+        <label>Fecha del Viaje </label>docker
         <input type="date" name="fecha" id="fecha">
 
     </form>
