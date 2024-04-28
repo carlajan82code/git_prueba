@@ -1,10 +1,40 @@
 <?php
-// require_once("includes/header.php");
-// require_once("database.php");
-// $con = conectar();
+session_start();
+require_once ("vistas/header.php");
+require_once ("database.php");
 
-// echo "<h2>Mis reservas</h2>";
-// $resultado = obtener_mis_reservas($con, $_SESSION['logged_user']);
+//Hacemos conexión a la Base de Datos
+$con = conectar();
+?>
+
+<h1>Bienvenido <?php echo $_SESSION['nombre']; ?></h1>
+
+<?php
+//Consultamos BBDD Reservas 
+$resultadoPaquete = mysqli_query($con, "SELECT * FROM paquete;");
+?>
+
+<h2>Formulario Reservas</h2>
+
+    <form action="">
+    <select name="select">
+       <?php
+        while ($fila = mysql_fetch_assoc($resultadoPaquete)): ?>  
+            <option value="<?php echo $fila['id_paquete']; ?>"> <?php echo $fila['nombre_paquete']; ?> </option>"  
+    </select>
+        <?php
+            endwhile;
+        ?>
+
+        <label>Fecha del Viaje </label>
+        <input type="date" name="fecha" id="fecha">
+
+    </form>
+
+<h2>Mis reservas</h2>;
+
+<?php 
+// $resultado = obtener_mis_reservas($con, $_SESSION['id']);
 // $num_filas = obtener_num_filas($resultado);
 // if($num_filas == 0){
 // 	echo "No tienes reservas para hoy<br/>";
@@ -43,12 +73,27 @@
 // 	unset($_SESSION["pista_ocupada"]);
 // }
 
-session_start();
-require_once("database.php");
 
-$con = conectar();
-
-echo "<h2>Bienvenido ". $_SESSION['logged_user_name']."</h2>";
+//while ($Reserva = mysqli_fetch_assoc($query) )
 
 
 ?>
+
+<table class="reservas">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Titulo</th>
+            <th>Precio</th>
+            <th>Paquete</th>
+        </tr>
+    </thead>       
+
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Hostal Hosgmead</td>
+            <td>10000€</td>
+        </tr>
+    </tbody>
+</table>
