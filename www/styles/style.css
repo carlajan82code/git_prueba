@@ -28,7 +28,7 @@ body {
 /** Bloque Navegacion */
 
 .header {
-    /*width: 1600px;*/
+   
     width: 100%;
     width: auto;
 }
@@ -36,7 +36,7 @@ body {
 .navegacion {
 
     background-color: var(--colorNavegacion);
-    /*width: 1600px;*/
+  
     width: 100%;
     padding: 10px;
 
@@ -214,6 +214,12 @@ body {
     cursor: pointer;
 }
 
+.boton_registro:hover{
+
+background-color: var(--azulTierra);
+
+}
+
 .boton_separacion {
     margin-top: 9px;
     padding: 0 0 10px 0;
@@ -241,10 +247,9 @@ body {
     padding: 0 0 20px 0;
 
 
-    width: 100%;
+   
     /* Cambia este valor según lo que necesites */
-    margin: auto;
-
+  
 }
 
 
@@ -340,7 +345,6 @@ body {
 
 .copy_foooter--blog {
     text-align: center;
-    /* width: 1600px;*/
     width: 100%;
     padding: 15px;
     background-color: var(--colorNavegacion);
@@ -430,7 +434,7 @@ body {
       input[type="tel"],
       select,
       textarea {
-        width: 100%;
+        width: 95%;
         padding: 10px;
         border: 1px solid #777;
         background-color: #444;
@@ -452,17 +456,19 @@ body {
       }
       
       button[type="submit"] {
-        background-color: #00f;
+        background-color: var(--color_boton);
         color: #fff;
-        border: none;
+        border-radius: 5px;
         padding: 10px 20px;
         cursor: pointer;
         border-radius: 5px;
         font-size: 16px;
       }
+
+     
       
       button[type="submit"]:hover {
-        background-color: #003;
+        background-color:var(--azulTierra)
       }
       
       .boton{
