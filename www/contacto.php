@@ -34,8 +34,8 @@
                 <input type="text" id="apellido" name="apellido" minlength="2" maxlength="20" tabindex="2">
             </div>
             <div class="form-group" id="div-mail">
-                <label for="email">Email*:</label>
-                <input type="text" id="mail" name="email" minlength="2" maxlength="20" tabindex="3">
+                <label for="mail">Email*:</label>
+                <input type="text" id="mail" name="mail" minlength="2" maxlength="20" tabindex="3">
             </div>
             <div class="form-group" id="div-telefono">
                 <label for="telefono">Número de Teléfono*:</label>
