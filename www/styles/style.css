@@ -427,18 +427,15 @@ body {
 @media (max-width: 768px) {
     .form_contenedor {
         width: 90%;
-        /* Cambia el ancho del contenedor para que ocupe el 90% del ancho disponible */
         max-width: 400px;
-        /* Establece un ancho máximo para el contenedor */
         padding: 5%;
-        /* Ajusta el relleno del contenedor */
+       
     }
 
     .form_registro {
         background-size: cover;
-        /* Ajusta el tamaño de la imagen de fondo para cubrir completamente el contenedor */
         background-position: center;
-        /* Centra la imagen de fondo */
+       
     }
 
     .boton_registro{
@@ -457,7 +454,7 @@ body {
         /* El formulario ocupará todo el ancho disponible */
         padding: 0 20px;
         background-size: cover;
-        /* Ajusta el tamaño de la imagen de fondo para cubrir completamente el contenedor */
+        
         background-position: center;
 
     }
@@ -491,7 +488,7 @@ body {
     .footer_redes{
 
         display: flex;
-        justify-content: center; /* Centra los iconos horizontalmente */
+        justify-content: center; 
         margin-top: 0;
 
     }
