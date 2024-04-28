@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body> -->
     <?php
     require_once("./vistas/header.php");
 
