@@ -14,26 +14,29 @@ $con = conectar();
 $resultadoPaquete = mysqli_query($con, "SELECT * FROM paquete;");
 ?>
 
-<h2>Formulario Reservas</h2>
+<h2 class="title_form">Formulario Reservas</h2>
 
-    <form action="">
-    <select name="select">
+    <form action="" class="formUser">
+
        <?php while ($fila = mysqli_fetch_array($resultadoPaquete)): 
             extract ($fila);
         ?>  
-            <option value="<?php echo $id_paquete; ?>"> <?php echo $nombre_paquete; ?> </option>  
-
+               <div class="card">
+                    <div class="content">
+                        <option value="<?php echo $id_paquete; ?>"> </option> 
+                        <div class="title"><?php echo $nombre_paquete; ?></div>
+                        <div class="price"><?php echo $precio; ?></div>
+               
+                    </div>
+                <button class="btnReserva">Reservar</button>
+            </div>
         <?php
             endwhile; 
         ?>
-    </select>
-
-        <label>Fecha del Viaje </label>
-        <input type="date" name="fecha" id="fecha">
-
+    </div>
     </form>
 
-<h2>Mis reservas</h2>;
+
 
 <?php 
 // $resultado = obtener_mis_reservas($con, $_SESSION['id']);
@@ -81,21 +84,4 @@ $resultadoPaquete = mysqli_query($con, "SELECT * FROM paquete;");
 
 ?>
 
-<table class="reservas">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Titulo</th>
-            <th>Precio</th>
-            <th>Paquete</th>
-        </tr>
-    </thead>       
 
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Hostal Hosgmead</td>
-            <td>10000€</td>
-        </tr>
-    </tbody>
-</table>
