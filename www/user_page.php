@@ -21,11 +21,10 @@ $resultadoPaquete = mysqli_query($con, "SELECT * FROM paquete;");
        <?php
         while ($fila = mysqli_fetch_assoc($resultadoPaquete)): ?>  
             <option value="<?php echo $fila['id_paquete']; ?>"> <?php echo $fila['nombre_paquete']; ?> </option>"  
-
         <?php
-            endwhile;
+            endwhile; 
         ?>
-        </select>
+    </select>
 
         <label>Fecha del Viaje </label>docker
         <input type="date" name="fecha" id="fecha">

@@ -10,8 +10,8 @@
 
 }
 
-body{
-width: 100%;
+body {
+    width: 100%;
 
 }
 
@@ -28,8 +28,8 @@ width: 100%;
 /** Bloque Navegacion */
 
 .header {
-   /*width: 1600px;*/
-   width: 100%;
+    /*width: 1600px;*/
+    width: 100%;
     width: auto;
 }
 
@@ -109,8 +109,8 @@ width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-  
-    
+
+
 
 }
 
@@ -119,15 +119,18 @@ width: 100%;
 
 
 .footer_contenido {
+
     margin-top: 70px;
     display: flex;
-    gap: 390px;
+    gap: 360px;
     padding: 2%;
 
 }
 
 .footer_cotenido-logo {
-    margin-left: 40px;
+
+    margin-left: 20px;
+    padding: 2%;
 }
 
 .footer_contenido-contacto {
@@ -145,16 +148,16 @@ width: 100%;
 
 /** Footer logo redes sociales*/
 
-    .footer_redes {
+.footer_redes {
 
-        
-        gap: 4px;
-        width: 35px;
-        height: 35px;
-        display: flex;
-        cursor: pointer;
-    
-    }
+
+    gap: 4px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    cursor: pointer;
+
+}
 
 
 
@@ -173,7 +176,8 @@ width: 100%;
 /** Formulario Registro */
 
 .form_registro {
-    background-color: #212529;
+    background-image: url(../img/moon-mars.webp);
+
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
@@ -182,7 +186,8 @@ width: 100%;
 .form_contenedor {
     width: 600px;
     margin: auto;
-   
+    padding: 3%;
+
 }
 
 .form_input {
@@ -226,12 +231,18 @@ width: 100%;
 /** Login */
 
 .form_login {
+    background-image: url(../img/hombreLuna.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
 
-    background-color: #212529;
     padding: 0 0 20px 0;
-   
-  
-    width: 100%; /* Cambia este valor según lo que necesites */
+
+
+    width: 100%;
+    /* Cambia este valor según lo que necesites */
     margin: auto;
 
 }
@@ -241,8 +252,8 @@ width: 100%;
 
 /** BLOG */
 .blog {
-   /** max-width: 1000px;*/
-   width: 100%;
+    /** max-width: 1000px;*/
+    width: 100%;
     width: auto;
     margin: auto;
 
@@ -323,20 +334,18 @@ width: 100%;
 
 
 
-
-
-.footer_contenido--blog{
+.footer_contenido--blog {
     text-align: center;
 }
 
-.copy_foooter--blog{
+.copy_foooter--blog {
     text-align: center;
-   /* width: 1600px;*/
-   width: 100%;
+    /* width: 1600px;*/
+    width: 100%;
     padding: 15px;
     background-color: var(--colorNavegacion);
     color: var(--blanco);
-    
+
 }
 
 /** Formulario de contacto */
@@ -468,17 +477,18 @@ width: 100%;
         flex-direction: column;
         margin-bottom: 40px;
         align-items: center;
-        
+
     }
-    .texto-entrada{
+
+    .texto-entrada {
         text-align: center;
     }
 
-    .texto-entrada--titulo{
+    .texto-entrada--titulo {
         text-align: center;
     }
 
-    .texto-entrada--p{
+    .texto-entrada--p {
         justify-content: center;
     }
 
@@ -493,11 +503,11 @@ width: 100%;
         margin-right: auto;
     }
 
-    .footer_contenido-contacto{
+    .footer_contenido-contacto {
         width: auto;
     }
 
-    .copy_foooter--blog{
+    .copy_foooter--blog {
         width: 1000px;
 
     }
@@ -507,56 +517,115 @@ width: 100%;
 
 @media (max-width: 768px) {
 
-    .navegacion{
+    .navegacion {
         width: auto;
     }
+
     .navegacion_contenido {
         flex-direction: column;
-        align-items: center; 
+        align-items: center;
         gap: 10px;
 
     }
 
-    .enlaces-nav{
+    .enlaces-nav {
         flex-direction: column;
     }
 
-    .copy_foooter--blog{
+    .copy_foooter--blog {
         width: 1000px;
 
     }
 
-    .blog-contenido{
+    .blog-contenido {
         text-align: center;
     }
-   
+
 
 }
+
+
+/** Responsive registro*/
+
+@media (max-width: 768px) {
+    .form_contenedor {
+        width: 90%;
+        max-width: 400px;
+        padding: 5%;
+       
+    }
+
+    .form_registro {
+        background-size: cover;
+        background-position: center;
+       
+    }
+
+    .boton_registro{
+
+    display: block;
+    margin: auto;
+
+    }
+}
+
 
 /**Responsive login_php*/
 @media (max-width: 768px) {
     .form_contenedor {
-        max-width: 100%; /* El formulario ocupará todo el ancho disponible */
-        padding: 0 20px; 
+        max-width: 100%;
+        /* El formulario ocupará todo el ancho disponible */
+        padding: 0 20px;
+        background-size: cover;
+        
+        background-position: center;
+
+    }
+
+    .boton_registro{
+
+        display: block;
+        margin: auto;
+
     }
 }
 
 
 /**Responsive footer*/
 @media (max-width: 768px) {
-  
+
     .footer_contenido {
         flex-direction: column;
         gap: 10px;
+
+
     }
+
+    .footer_cotenido-logo{
+
+        display: block;
+        margin: auto;
+
+    }
+
+    .footer_redes{
+
+        display: flex;
+        justify-content: center; 
+        margin-top: 0;
+
+    }
+
+    
 }
+
 /** gestion_usuarios y reservas*/
 
 h1 {
     font-size: 26px;
     margin: 20px 0;
     text-align: center;
-  }
+}
 
 h1:first-of-type {
     margin-top: 50px;
@@ -574,63 +643,74 @@ hr {
     padding-left: 10px;
     padding-right: 10px;
     text-align: center;
-  }
-  
-  .responsive-tabla {
+}
+
+.responsive-tabla {
     li {
-      border-radius: 3px;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 15px;
+        border-radius: 3px;
+        padding: 15px 30px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
     }
+
     .tabla-header {
-      background-color: #c0c1c3;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-      font-weight: bold;
+        background-color: #c0c1c3;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        font-weight: bold;
     }
+
     .tabla-fila {
-      background-color: #ffffff;
-      box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+        background-color: #ffffff;
+        box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
     }
+
     .col-1 {
-      flex-basis: 35%;
+        flex-basis: 35%;
     }
+
     .col-2 {
-      flex-basis: 25%;
+        flex-basis: 25%;
     }
+
     .col-3 {
-      flex-basis: 25%;
+        flex-basis: 25%;
     }
+
     .col-4 {
-      flex-basis: 15%;
+        flex-basis: 15%;
     }
+
     .col-unica {
         flex-basis: 100%;
     }
-    
+
     @media all and (max-width: 767px) {
-      .tabla-header {
-        display: none;
-      }
-      li {
-        display: block;
-      }
-      .col {
-        flex-basis: 100%;
-      }
-      .col {
-        display: flex;
-        padding: 10px 0;
-        &:before {
-          color: #212529;
-          padding-right: 10px;
-          content: attr(data-label);
-          flex-basis: 50%;
-          text-align: right;
+        .tabla-header {
+            display: none;
         }
-      }
+
+        li {
+            display: block;
+        }
+
+        .col {
+            flex-basis: 100%;
+        }
+
+        .col {
+            display: flex;
+            padding: 10px 0;
+
+            &:before {
+                color: #212529;
+                padding-right: 10px;
+                content: attr(data-label);
+                flex-basis: 50%;
+                text-align: right;
+            }
+        }
     }
-  }
+}

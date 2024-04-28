@@ -13,11 +13,6 @@ function conectar(){
 	return $con;
 }
 
-/*function existe_admin($con){
-	$result = mysqli_query($con, "select * from usuario where tipo=0");
-	return $result;
-}*/
-
 function existe_admin($con){
     $stmt = mysqli_prepare($con, "SELECT * FROM usuario WHERE tipo = ?");
     $tipo_admin = 0;
@@ -124,39 +119,11 @@ function obtener_usuario($con, $id){
     return $result;
 }
 
-/*function obtener_usuario($con, $id){
-	$result = mysqli_query($con, "select * from usuario where id_usuario = $id");
-	return $result;
-}*/
-
 //////////////////////////////////////////////
 //////////////////////////////////////////////
 //  FUNCIONES CON LA TABLA PAQUETE
 //////////////////////////////////////////////
 //////////////////////////////////////////////
-// vamos a querer que el admin cree paquetes? si no, esto no lo incluimos DE MOMENTO LAS DEJO
-
-/*function crear_pista($con, $nombre){
-	$stmt = mysqli_prepare($con, "insert into pista(nombre) values(?);");
-	mysqli_stmt_bind_param($stmt, "s", $nombre);
-	return mysqli_stmt_execute($stmt);
-	//return $resultado;
-}
-
-function borrar_pistas($con, $codigos){
-	$consulta = "delete from pista where id_pista in (";
-	foreach($codigos as $codigo){
-		$consulta = $consulta.$codigo.", ";
-	}
-	$consulta = $consulta."0)";
-	mysqli_query($con, $consulta);
-}
-
-function modificar_pista($con, $id_pista, $nombre){
-	$stmt = mysqli_prepare($con, "update pista set nombre=? where id_pista=?");
-	mysqli_stmt_bind_param($stmt, "si", $nombre, $id_pista);
-	mysqli_stmt_execute($stmt);
-} */
 
 function obtener_paquetes($con){
 	$result = mysqli_query($con, "select * from paquete");
@@ -172,11 +139,6 @@ function obtener_paquete($con, $id){
 
     return $result;
 }
-
-/*function obtener_paquete($con, $id){
-	$result = mysqli_query($con, "select * from paquete where id_paquete = $id");
-	return $result;
-}*/
 
 //////////////////////////////////////////////
 //////////////////////////////////////////////
@@ -209,27 +171,7 @@ function obtener_paquete($con, $id){
     return true;
 }
 
-//  function comprobar_disponibilidad($con, $paquete, $fecha){
-//  	$result = mysqli_query($con, "select * from reserva where paquete = $paquete and fecha = $fecha");
-//  	$reserva = mysqli_fetch_array($result);
-//  	if($reserva){
-//  		return false;
-//  	}
-//  	return true;
-//  }
-
-/* function borrar_reservas($con, $codigos){
- 	$consulta = "delete from reserva where id_reserva in (";
- 	foreach($codigos as $codigo){
- 		$consulta = $consulta.$codigo.", ";
- 	}
- 	$consulta = $consulta."0)";
- 	mysqli_query($con, $consulta);
- } */
-
- /* CON CONSULTA PREPARADA */
-
- function borrar_reservas($con, $codigos){
+function borrar_reservas($con, $codigos){
     $placeholders = rtrim(str_repeat('?,', count($codigos)), ',');
     $consulta = "DELETE FROM reserva WHERE id_reserva IN ($placeholders)";
     $stmt = mysqli_prepare($con, $consulta);
@@ -248,14 +190,6 @@ function obtener_paquete($con, $id){
  	mysqli_query($con, $consulta);
  }*/
 
-/* function obtener_reservas($con){
- 	$result = mysqli_query($con, "select r.id_reserva, u.nombre, p.nombre_paquete as nombre_paquete, r.fecha
- 		from reserva r, paquete p, usuario u
- 		where r.usuario = u.id_usuario and r.paquete = p.id_paquete");
- 	return $result;
- }*/
-
- // lo puedo escribir con consulta preparada
  function obtener_reservas($con){
     $consulta = "SELECT r.id_reserva, u.nombre, p.nombre_paquete AS nombre_paquete, r.fecha
                 FROM reserva r
@@ -269,12 +203,6 @@ function obtener_paquete($con, $id){
 
     return $result;
 }
-
-/* function obtener_mis_reservas($con, $id){
- 	$result = mysqli_query($con, "select id_reserva, usuario, nombre, fecha from reserva, paquete
- 		where usuario = $id and reserva.paquete = paquete.id_paquete");
- 	return $result;
- }*/
 
  function obtener_mis_reservas($con, $id){
     $consulta = "SELECT id_reserva, usuario, nombre, fecha 
