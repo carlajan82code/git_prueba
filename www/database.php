@@ -9,7 +9,7 @@ $db_port = 3306;
 
 function conectar(){
 	$con = mysqli_connect($GLOBALS["host"], $GLOBALS["user"], $GLOBALS["pass"], $GLOBALS["db_name"], $GLOBALS["db_port"]) or die("Error al conectar con la base de datos");
-	mysqli_select_db($con, $GLOBALS["db_name"]);
+	// mysqli_select_db($con, $GLOBALS["db_name"]);
 	return $con;
 }
 
