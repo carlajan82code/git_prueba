@@ -119,22 +119,25 @@ width: 100%;
 
 
 .footer_contenido {
+    
     margin-top: 70px;
     display: flex;
-    gap: 390px;
+    gap: 360px;
     padding: 2%;
 
 }
 
 .footer_cotenido-logo {
-    margin-left: 40px;
+
+  margin-left: 20px;
+    padding: 2%;
 }
 
 .footer_contenido-contacto {
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
-    align-items: center;
+   align-items: center;
 }
 
 .footer_contenido-contacto h2 {
@@ -173,7 +176,8 @@ width: 100%;
 /** Formulario Registro */
 
 .form_registro {
-    background-color: #212529;
+    background-image: url(../img/moon-mars.webp);
+  
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
@@ -182,6 +186,7 @@ width: 100%;
 .form_contenedor {
     width: 600px;
     margin: auto;
+    padding: 3%;
    
 }
 
@@ -226,8 +231,13 @@ width: 100%;
 /** Login */
 
 .form_login {
-
-    background-color: #212529;
+     background-image: url(../img/hombreLuna.jpg);
+     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+   
     padding: 0 0 20px 0;
    
   
