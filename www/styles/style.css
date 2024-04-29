@@ -103,7 +103,6 @@ body {
 
 .footer {
     background-color: var(--blanco);
-    /**width: 1620px;*/
     width: 100%;
     width: auto;
     display: flex;
@@ -150,10 +149,9 @@ body {
 
 .footer_redes {
 
-
     gap: 4px;
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     display: flex;
     cursor: pointer;
 
