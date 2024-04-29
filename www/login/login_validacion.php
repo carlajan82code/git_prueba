@@ -25,9 +25,11 @@ if(isset($login)){
 				$_SESSION['tipo'] = $usuario['tipo'];
 
 				if($_SESSION['tipo'] === 0){
+			
 					header("Location: ../admin_page.php");
 				}
 				else{
+				
 					header("Location: ../user_page.php");
 				}	
 

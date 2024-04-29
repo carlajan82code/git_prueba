@@ -1,7 +1,8 @@
 <?php
 session_start();
-require_once ("vistas/header.php");
+require_once ("vistas/header_login.php");
 require_once ("database.php");
+
 
 //Hacemos conexión a la Base de Datos
 $con = conectar();
