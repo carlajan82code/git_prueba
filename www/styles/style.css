@@ -105,37 +105,29 @@ body {
     background-color: var(--blanco);
 
     width: 100%;
-    width: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
-
 }
-
-
-
-
 
 .footer_contenido {
 
     margin-top: 70px;
     display: flex;
-    gap: 360px;
+    gap: 335px;
     padding: 1%;
 
 }
 
 .footer_cotenido-logo {
 
-    margin-left: 8px;
+    margin-left: -8px;
     padding: 2%;
 }
 
 .footer_cotenido-logo img {
 
-    margin-right: 40px;
+   margin-left: -170px;
 }
 
 .footer_contenido-contacto {
