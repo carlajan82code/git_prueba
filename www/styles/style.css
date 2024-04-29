@@ -216,7 +216,8 @@ body {
 
 .boton_registro:hover{
 
-background-color: var(--azulTierra);
+background-color: var(--blanco);
+color: var(--color_boton);
 
 }
 
@@ -248,7 +249,7 @@ background-color: var(--azulTierra);
 
 
    
-    /* Cambia este valor según lo que necesites */
+    
   
 }
 
@@ -384,7 +385,7 @@ background-color: var(--azulTierra);
       
       .header-container {
         flex-direction: column;
-        background-image: url(../img/earth.jpg);
+        background-image: url(../img/earth-1365995.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         height: 350px;
@@ -469,7 +470,8 @@ background-color: var(--azulTierra);
      
       
       button[type="submit"]:hover {
-        background-color:var(--azulTierra)
+        background-color:var(--blanco);
+        color:var(--color_boton);
       }
       
       .boton{
