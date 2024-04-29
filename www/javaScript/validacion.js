@@ -101,9 +101,12 @@ function validar_login() {
 
   if (ValidaEmail(mail) && ValidarPassword(password)) {
     // si la validacion es correcta redirecciona a validacion_login para validacion php//
-    location.href = "validacion_login.php";
+    location.href = "login_validacion.php";
   }
 }
+
+
+
 
 /* ---- VALIDACION FORMULARIO DE CONTACTO ---- */
 function validar_formulario_contacto() {
