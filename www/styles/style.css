@@ -28,7 +28,7 @@ body {
 /** Bloque Navegacion */
 
 .header {
-   
+
     width: 100%;
     width: auto;
 }
@@ -36,7 +36,7 @@ body {
 .navegacion {
 
     background-color: var(--colorNavegacion);
-  
+
     width: 100%;
     padding: 10px;
 
@@ -103,7 +103,7 @@ body {
 
 .footer {
     background-color: var(--blanco);
-    /**width: 1620px;*/
+
     width: 100%;
     width: auto;
     display: flex;
@@ -123,21 +123,28 @@ body {
     margin-top: 70px;
     display: flex;
     gap: 360px;
-    padding: 2%;
+    padding: 1%;
 
 }
 
 .footer_cotenido-logo {
 
-    margin-left: 20px;
+    margin-left: 8px;
     padding: 2%;
+}
+
+.footer_cotenido-logo img {
+
+    margin-right: 40px;
 }
 
 .footer_contenido-contacto {
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
+    justify-content: center;
     align-items: center;
+    margin-bottom: 30px;
+
 }
 
 .footer_contenido-contacto h2 {
@@ -149,16 +156,12 @@ body {
 /** Footer logo redes sociales*/
 
 .footer_redes {
-
-
-    gap: 4px;
-    width: 35px;
-    height: 35px;
+    gap: 10px;
     display: flex;
+    flex-direction: row;
     cursor: pointer;
 
 }
-
 
 
 .copi_footer {
@@ -214,10 +217,10 @@ body {
     cursor: pointer;
 }
 
-.boton_registro:hover{
+.boton_registro:hover {
 
-background-color: var(--blanco);
-color: var(--color_boton);
+    background-color: var(--blanco);
+    color: var(--color_boton);
 
 }
 
@@ -248,9 +251,9 @@ color: var(--color_boton);
     padding: 0 0 20px 0;
 
 
-   
-    
-  
+
+
+
 }
 
 
@@ -258,7 +261,7 @@ color: var(--color_boton);
 
 /** BLOG */
 .blog {
-  
+
     width: 100%;
     width: auto;
     margin: auto;
@@ -332,7 +335,7 @@ color: var(--color_boton);
 .texto-entrada--boton {
     padding: 10px;
     text-decoration: none;
-    background-color:var(--color_boton);
+    background-color: var(--color_boton);
     color: var(--blanco);
     border-radius: 5px;
 
@@ -354,110 +357,110 @@ color: var(--color_boton);
 }
 
 /** Formulario de contacto */
-#container-contacto{
+#container-contacto {
     body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         background-color: #111;
         color: #fff;
         margin: 1px;
-      }
-      
-      header {
+    }
+
+    header {
         background-color: #333;
-        text-align:center;
-        height:55;
-        justify-content:right;
-      }
-      
-      .menu{
+        text-align: center;
+        height: 55;
+        justify-content: right;
+    }
+
+    .menu {
         display: flex;
         align-items: right;
-        justify-content:left;
-      }
+        justify-content: left;
+    }
 
-      .cuentanos {
+    .cuentanos {
         position: absolute;
         top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
         color: white;
-      }
-      
-      .header-container {
+    }
+
+    .header-container {
         flex-direction: column;
         background-image: url(../img/earth-1365995.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         height: 350px;
-      }
-      
-      
-      h1 {
+    }
+
+
+    h1 {
         font-size: 32px;
         margin: 20px 0;
-      }
-      
-      nav ul {
+    }
+
+    nav ul {
         list-style-type: none;
-      }
-      
-      nav ul li {
+    }
+
+    nav ul li {
         display: inline;
         margin-left: 20px;
-      }
-      
-      nav ul li a {
+    }
+
+    nav ul li a {
         color: #fff;
         text-decoration: none;
-      }
-      
-      .container {
+    }
+
+    .container {
         max-width: 800px;
         margin: 0 auto;
         padding: 20px;
-      }
-      
-      h2 {
+    }
+
+    h2 {
         text-align: center;
         margin-bottom: 20px;
-      }
-      
-      .form-group {
+    }
+
+    .form-group {
         margin-bottom: 20px;
-      }
-      
-      label {
+    }
+
+    label {
         display: block;
         margin-bottom: 5px;
-      }
-      
-      input[type="text"],
-      input[type="email"],
-      input[type="tel"],
-      select,
-      textarea {
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
         width: 95%;
         padding: 10px;
         border: 1px solid #777;
         background-color: #444;
         color: #fff;
         border-radius: 5px;
-      }
-      
-      select {
+    }
+
+    select {
         appearance: none;
         -webkit-appearance: none;
         -moz-appearance: none;
         background-image: url('data:image/svg+xml;utf8,<svg fill="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>');
         background-position: right 10px top 50%;
         background-repeat: no-repeat;
-      }
-      
-      textarea {
+    }
+
+    textarea {
         resize: vertical;
-      }
-      
-      button[type="submit"] {
+    }
+
+    button[type="submit"] {
         background-color: var(--color_boton);
         color: #fff;
         border-radius: 5px;
@@ -465,19 +468,19 @@ color: var(--color_boton);
         cursor: pointer;
         border-radius: 5px;
         font-size: 16px;
-      }
+    }
 
-     
-      
-      button[type="submit"]:hover {
-        background-color:var(--blanco);
-        color:var(--color_boton);
-      }
-      
-      .boton{
+
+
+    button[type="submit"]:hover {
+        background-color: var(--blanco);
+        color: var(--color_boton);
+    }
+
+    .boton {
         display: flex;
         align-items: center;
-      } 
+    }
 }
 
 
@@ -561,19 +564,19 @@ color: var(--color_boton);
         width: 90%;
         max-width: 400px;
         padding: 5%;
-       
+
     }
 
     .form_registro {
         background-size: cover;
         background-position: center;
-       
+
     }
 
-    .boton_registro{
+    .boton_registro {
 
-    display: block;
-    margin: auto;
+        display: block;
+        margin: auto;
 
     }
 }
@@ -586,12 +589,12 @@ color: var(--color_boton);
         /* El formulario ocupará todo el ancho disponible */
         padding: 0 20px;
         background-size: cover;
-        
+
         background-position: center;
 
     }
 
-    .boton_registro{
+    .boton_registro {
 
         display: block;
         margin: auto;
@@ -610,22 +613,22 @@ color: var(--color_boton);
 
     }
 
-    .footer_cotenido-logo{
+    .footer_cotenido-logo {
 
         display: block;
         margin: auto;
 
     }
 
-    .footer_redes{
+    .footer_redes {
 
         display: flex;
-        justify-content: center; 
+        justify-content: center;
         margin-top: 0;
 
     }
 
-    
+
 }
 
 /** gestion_usuarios y reservas*/
@@ -727,11 +730,11 @@ hr {
 
 /** User Page */
 
-.title_form{
+.title_form {
     text-align: center;
 }
 
-.formUser{
+.formUser {
     display: flex;
     gap: 50px;
     justify-content: center;
@@ -748,39 +751,39 @@ hr {
     text-align: center;
     position: relative;
     cursor: pointer;
-    box-shadow: 0 10px 15px -3px rgba(33,150,243,.4),0 4px 6px -4px rgba(33,150,243,.4);
+    box-shadow: 0 10px 15px -3px rgba(33, 150, 243, .4), 0 4px 6px -4px rgba(33, 150, 243, .4);
     border-radius: 10px;
     background-color: #6B6ECC;
     background: linear-gradient(45deg, #04051dea 0%, #2b566e 100%);
-  }
-  
-  .content {
+}
+
+.content {
     padding: 20px;
-  }
-  
-  .content .price {
+}
+
+.content .price {
     color: white;
     font-weight: 800;
     font-size: 50px;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
-  }
-  
-  .content .description {
+}
+
+.content .description {
     color: rgba(255, 255, 255, 0.6);
     margin-top: 10px;
     font-size: 14px;
-  }
-  
-  .content .title {
+}
+
+.content .title {
     font-weight: 800;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.64);
     margin-top: 10px;
     font-size: 25px;
     letter-spacing: 1px;
-  }
-  
-  .btnReserva {
+}
+
+.btnReserva {
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
@@ -796,6 +799,4 @@ hr {
     width: 90%;
     text-shadow: 0px 4px 18px #2c3442;
     cursor: pointer;
-  }
-  
-  
+}
