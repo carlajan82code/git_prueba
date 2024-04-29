@@ -103,10 +103,7 @@ body {
 
 .footer {
     background-color: var(--blanco);
-<<<<<<< HEAD
-=======
 
->>>>>>> ramaCarla
     width: 100%;
     width: auto;
     display: flex;
@@ -159,14 +156,11 @@ body {
 /** Footer logo redes sociales*/
 
 .footer_redes {
-<<<<<<< HEAD
 
     gap: 4px;
     width: 30px;
     height: 30px;
-=======
     gap: 10px;
->>>>>>> ramaCarla
     display: flex;
     flex-direction: row;
     cursor: pointer;
