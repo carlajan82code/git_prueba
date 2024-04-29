@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("./vistas/header.php");
+include_once("./vistas/header_login.php");
 require_once("database.php");
 $con = conectar();
 
