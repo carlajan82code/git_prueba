@@ -2,7 +2,7 @@
 session_start();
 require_once ("../database.php");
 
-
+$_SESSION['login'] = false;
 $login = $_POST['login'];
 $mail = $_POST['mail'];
 $contrasena = $_POST['contrasena'];
@@ -27,10 +27,12 @@ if(isset($login)){
 				if($_SESSION['tipo'] === 0){
 			
 					header("Location: ../admin_page.php");
+					// $_SESSION['login'] = true;
 				}
 				else{
 				
 					header("Location: ../user_page.php");
+					// $_SESSION['login'] = true;
 				}	
 
 			} // que pasa si no lo es?? hay que manejar el else

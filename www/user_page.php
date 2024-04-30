@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 require_once ("vistas/header_login.php");
 require_once ("database.php");
 
@@ -37,10 +38,11 @@ $resultadoPaquete = mysqli_query($con, "SELECT * FROM paquete;");
     </div>
 
     </form>
+    <?php 
 
 
 
-<?php 
+
 // $resultado = obtener_mis_reservas($con, $_SESSION['id']);
 // $num_filas = obtener_num_filas($resultado);
 // if($num_filas == 0){
