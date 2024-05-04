@@ -316,3 +316,14 @@ function validar_formulario_contacto() {
 
   return validacion;
 }
+
+function validarReserva(){
+  let fecha = document.getElementById("fecha").value;
+  let errorLabel = document.getElementById("error");
+  if (fecha === "") {
+      errorLabel.innerText = "Por favor introduzca una fecha correcta";
+      return false; // Evitar que el formulario se envíe si no se selecciona una fecha
+  }
+  errorLabel.innerText = "";
+  return true;
+}
