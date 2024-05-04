@@ -33,7 +33,7 @@ if(isset($login)){
 					header("Location: ../user_page.php");
 				}	
 
-			} // que pasa si no lo es?? hay que manejar el else
+			}
 
 						
 		//}
