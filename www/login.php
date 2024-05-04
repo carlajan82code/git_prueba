@@ -14,11 +14,11 @@
 
     ?>
 
-    <form method="post" action="./login/login_validacion.php" class="form_login ">
+    <form method="post" action="./login/login_validacion.php" onsubmit="return validar_login()" class="form_login ">
         <div class="form_contenedor">
             <div class="form_input" id="email_login">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" placeholder="email" name="mail" id="mail" tabindex="1">
+                <input type="email" class="form-control" placeholder="email" name="mail" id="mail" tabindex="1" aria-label="escribe tu email aqui">
             </div>
             <div class="form_input" id="pass_login">
                 <label for="contrasena">Contraseña</label>
@@ -26,7 +26,7 @@
             </div>
 
             <div>
-                <button type="submit" onclick="validar_login()" name="login" class="boton_registro">Login</button>
+                <button type="submit" name="login" class="boton_registro">Login</button>
             </div>
         </div>
     </form>

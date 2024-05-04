@@ -62,15 +62,23 @@ function validar_registro() {
     validacion = false;
   }
 
-  setTimeout(function () {
-    location.reload();
-  }, 7000);
-
   if (validacion == true) {
-    // si la validacion es correcta redirecciona a enrutador.php para validacion php//
+    // Si la validacion es correcta, ejecutar setTimeout
+    setTimeout(function () {
+      // Borrar los mensajes de error después de 5 segundos
+      document.getElementById("nombre_registro").innerHTML = "";
+      document.getElementById("email_registro").innerHTML = "";
+      document.getElementById("contrasena_registro").innerHTML = "";
+    }, 5000); 
+
+    // Si la validacion es correcta redirecciona a enrutador.php para validacion php//
     alert("En construccion");
+    return true; // Permitir el envío del formulario si la validación es exitosa
   }
+
+  return false; // Detener el envío del formulario si hay errores de validación
 }
+
 
 /* ---- VALIDACION LOGIN ---- */
 function validar_login() {
@@ -85,6 +93,7 @@ function validar_login() {
       "<p style='color:#F5E644'>Usuario no válido " +
       mail +
       " debe contener un @</p>";
+    return false;
   }
 
   if (!ValidarPassword(password)) {
@@ -93,18 +102,18 @@ function validar_login() {
     contenido_pass.appendChild(mensaje);
     mensaje.innerHTML =
       "<p style='color:#F5E644'>La contraseña ingresada no es válida. Por favor, verifica tu contraseña y asegúrate de que esté escrita correctamente</p>";
+    return false;
   }
 
   setTimeout(function () {
     location.reload();
-  }, 7000);
+  }, 5000);
 
   if (ValidaEmail(mail) && ValidarPassword(password)) {
-    // si la validacion es correcta redirecciona a validacion_login para validacion php//
     location.href = "login_validacion.php";
+    return true;
   }
 }
-
 
 
 

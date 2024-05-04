@@ -11,7 +11,7 @@
         require_once("./vistas/header.php");
 
     ?>
-<form method="post" action="registro/registro_validacion.php" class="form_registro">
+<form method="post" action="registro/registro_validacion.php" onsubmit="return validar_registro()" class="form_registro">
     <div class="form_contenedor">
     <div class="form_input" id="nombre_registro">
         <label for="nombre">Nombre de usuario</label>
@@ -31,8 +31,10 @@
 </div>
 <div>
 
-    <button type="submit" onclick="validar_registro()" name="registro" class="boton_registro">Registrarse</button>
+    <button type="submit"  name="registro" class="boton_registro">Registrarse</button>
 </div>
+<div id="mensaje_registro_exitoso" style="color: green; font-weight: bold; display: none;"></div>
+
 <div class="boton_separacion">
     <p>¿Ya tienes una cuenta?</p>
     <a href="login.php">Ingresar ahora</a>
