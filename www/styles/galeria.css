@@ -1,8 +1,26 @@
-.imagen { /*Falta agregar mediaqueries para pantallas gigantes, grandes, o mobiles*/
-    height: 800px;
-    margin: 10px;
-}
-
 .centrar{
     background-color: rgb(204, 202, 202);
+}
+
+/* Media query para pantallas grandes */
+@media only screen and (min-width: 768px) {
+    .imagen {
+        margin: 10px;
+        height: 500px;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+    .imagen {
+        margin: 7px;
+        height: 400px;
+    }
+}
+
+/* Media query para dispositivos móviles */
+@media only screen and (max-width: 480px) {
+    .imagen {
+        margin: 5px;
+        height: 200px;
+    }
 }
