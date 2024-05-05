@@ -34,23 +34,3 @@ if(isset($login)){
 
 	}
 }
-
-
-// $_SESSION['logged_user'] = $usuario['id_usuario'];
-// $_SESSION['logged_user_name'] = $usuario['nombre'];
-// $_SESSION['logged_user_type'] = $usuario['tipo'];
-// if($usuario['tipo'] == 0){
-// 	header("Location: admin_page.php");
-// 	die;
-// }
-// header("Location: user_page.php");
-
-/*function validaEmail($mail){
-	$emailRegex = '/^[^\s@]+@[^\s@]+\.[^\s@]+$/';
-	return preg_match($emailRegex, $mail);
-}
-
-function validaContrasena($contrasena){
-	$contrasenaRegex = '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/';
-	return preg_match($contrasenaRegex, $contrasena);
-} */
