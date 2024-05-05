@@ -11,32 +11,26 @@ if(isset($login)){
 	//Comprobamos por seguridad isset/empty de email / pass
 	if (isset($mail) && !empty($mail) && isset($contrasena) && !empty ($contrasena))
 	{
-		//Si son correctos vamos a verificar si son validos
-		//if (validaEmail($mail) && validaContrasena($contrasena)){
+		$con = conectar();
+		//Accedemos Base de Datos para comprobar
+		$usuario = login($con, $mail, $contrasena);
 
-			$con = conectar();
-			//Accedemos Base de Datos para comprobar
-			$usuario = login($con, $mail, $contrasena);
+		if (isset($usuario))
+		{
+			$_SESSION['id_usuario'] = $usuario['id_usuario'];
+			$_SESSION['nombre'] = $usuario['nombre'];
+			$_SESSION['tipo'] = $usuario['tipo'];
 
-			if (isset($usuario))
-			{
-				$_SESSION['id_usuario'] = $usuario['id_usuario'];
-				$_SESSION['nombre'] = $usuario['nombre'];
-				$_SESSION['tipo'] = $usuario['tipo'];
-
-				if($_SESSION['tipo'] === 0){
-			
-					header("Location: ../admin_page.php");
-				}
-				else{
-				
-					header("Location: ../user_page.php");
-				}	
-
+			if($_SESSION['tipo'] === 0){
+		
+				header("Location: ../admin_page.php");
 			}
+			else{
+			
+				header("Location: ../user_page.php");
+			}	
 
-						
-		//}
+		}
 
 	}
 }
@@ -51,7 +45,7 @@ if(isset($login)){
 // }
 // header("Location: user_page.php");
 
-function validaEmail($mail){
+/*function validaEmail($mail){
 	$emailRegex = '/^[^\s@]+@[^\s@]+\.[^\s@]+$/';
 	return preg_match($emailRegex, $mail);
 }
@@ -59,4 +53,4 @@ function validaEmail($mail){
 function validaContrasena($contrasena){
 	$contrasenaRegex = '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/';
 	return preg_match($contrasenaRegex, $contrasena);
-}
+} */
