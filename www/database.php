@@ -7,13 +7,15 @@ $db_name = "grupo14";
 $db_port = 3306;
 
 
-function conectar(){
-	$con = mysqli_connect($GLOBALS["host"], $GLOBALS["user"], $GLOBALS["pass"], $GLOBALS["db_name"], $GLOBALS["db_port"]) or die("Error al conectar con la base de datos");
-	// mysqli_select_db($con, $GLOBALS["db_name"]);
-	return $con;
+function conectar()
+{
+    $con = mysqli_connect($GLOBALS["host"], $GLOBALS["user"], $GLOBALS["pass"], $GLOBALS["db_name"], $GLOBALS["db_port"]) or die("Error al conectar con la base de datos");
+    // mysqli_select_db($con, $GLOBALS["db_name"]);
+    return $con;
 }
 
-function existe_admin($con){
+function existe_admin($con)
+{
     $stmt = mysqli_prepare($con, "SELECT * FROM usuario WHERE tipo = ?");
     $tipo_admin = 0;
     mysqli_stmt_bind_param($stmt, "i", $tipo_admin);
@@ -25,13 +27,15 @@ function existe_admin($con){
 }
 
 // No se le aplica consulta preparada
-function obtener_num_filas($resultado){
-	return mysqli_num_rows($resultado);
+function obtener_num_filas($resultado)
+{
+    return mysqli_num_rows($resultado);
 }
 
-function login($con, $mail, $contrasena){
-	$con=conectar();
-	$hash_contrasena = hash("sha512", $contrasena);
+function login($con, $mail, $contrasena)
+{
+    $con = conectar();
+    $hash_contrasena = hash("sha512", $contrasena);
     $stmt = $con->prepare("SELECT *
                         FROM usuario
                         WHERE mail=?
@@ -43,12 +47,14 @@ function login($con, $mail, $contrasena){
     return mysqli_fetch_array($usuario);
 }
 
-function obtener_resultados($resultado){
-	return mysqli_fetch_array($resultado);
+function obtener_resultados($resultado)
+{
+    return mysqli_fetch_array($resultado);
 }
 
-function cerrar_conexion($con){
-	mysqli_close($con);
+function cerrar_conexion($con)
+{
+    mysqli_close($con);
 }
 
 //////////////////////////////////////////////
@@ -57,12 +63,13 @@ function cerrar_conexion($con){
 //////////////////////////////////////////////
 //////////////////////////////////////////////
 
-function crear_usuario($con, $nombre, $pass, $tipo){
-	$password = password_hash($pass, PASSWORD_DEFAULT);
-	$stmt = mysqli_prepare($con, "insert into usuario(nombre, pass, tipo) values(?,?,?);");
-	mysqli_stmt_bind_param($stmt, "ssi", $nombre, $password, $tipo);
-	return mysqli_stmt_execute($stmt);
-	//return $resultado;
+function crear_usuario($con, $nombre, $pass, $tipo)
+{
+    $password = password_hash($pass, PASSWORD_DEFAULT);
+    $stmt = mysqli_prepare($con, "insert into usuario(nombre, pass, tipo) values(?,?,?);");
+    mysqli_stmt_bind_param($stmt, "ssi", $nombre, $password, $tipo);
+    return mysqli_stmt_execute($stmt);
+    //return $resultado;
 }
 
 /*
@@ -75,13 +82,14 @@ function borrar_usuario($con, $id){
 }*/
 
 // ELIMINA VARIOS USUARIOS A LA VES
-function borrar_usuarios($con, $codigos){
-	$consulta = "delete from usuario where id_usuario in (";
-	foreach($codigos as $codigo){
-		$consulta = $consulta.$codigo.", ";
-	}
-	$consulta = $consulta."0)";
-	mysqli_query($con, $consulta);
+function borrar_usuarios($con, $codigos)
+{
+    $consulta = "delete from usuario where id_usuario in (";
+    foreach ($codigos as $codigo) {
+        $consulta = $consulta . $codigo . ", ";
+    }
+    $consulta = $consulta . "0)";
+    mysqli_query($con, $consulta);
 }
 
 /* LA QUITO PORQUE GENERA WARNINGS QUE IMPIDEN QUE LA REDIRECCIÓN FUNCIONE 
@@ -97,19 +105,22 @@ function borrar_usuarios($con, $codigos){
     return $resultado;
 }*/
 
-function modificar_usuario($con, $id_usuario, $nombre, $pass, $tipo){
-	$password = password_hash($pass, PASSWORD_DEFAULT);
-	$stmt = mysqli_prepare($con, "update usuario set nombre=?, pass=?, tipo=? where id_usuario=?");
-	mysqli_stmt_bind_param($stmt, "ssii", $nombre, $password, $tipo, $id_usuario);
-	mysqli_stmt_execute($stmt);
+function modificar_usuario($con, $id_usuario, $nombre, $pass, $tipo)
+{
+    $password = password_hash($pass, PASSWORD_DEFAULT);
+    $stmt = mysqli_prepare($con, "update usuario set nombre=?, pass=?, tipo=? where id_usuario=?");
+    mysqli_stmt_bind_param($stmt, "ssii", $nombre, $password, $tipo, $id_usuario);
+    mysqli_stmt_execute($stmt);
 }
 
-function obtener_usuarios($con){
-	$result = mysqli_query($con, "select * from usuario");
-	return $result;
+function obtener_usuarios($con)
+{
+    $result = mysqli_query($con, "select * from usuario");
+    return $result;
 }
 
-function obtener_usuario($con, $id){
+function obtener_usuario($con, $id)
+{
     $stmt = mysqli_prepare($con, "SELECT * FROM usuario WHERE id_usuario = ?");
     mysqli_stmt_bind_param($stmt, "i", $id);
     mysqli_stmt_execute($stmt);
@@ -125,12 +136,14 @@ function obtener_usuario($con, $id){
 //////////////////////////////////////////////
 //////////////////////////////////////////////
 
-function obtener_paquetes($con){
-	$result = mysqli_query($con, "select * from paquete");
-	return $result;
+function obtener_paquetes($con)
+{
+    $result = mysqli_query($con, "select * from paquete");
+    return $result;
 }
 
-function obtener_paquete($con, $id){
+function obtener_paquete($con, $id)
+{
     $stmt = mysqli_prepare($con, "SELECT * FROM paquete WHERE id_paquete = ?");
     mysqli_stmt_bind_param($stmt, "i", $id);
     mysqli_stmt_execute($stmt);
@@ -146,18 +159,20 @@ function obtener_paquete($con, $id){
 //////////////////////////////////////////////
 //////////////////////////////////////////////
 
- function crear_reserva($con, $usuario, $fecha, $paquete){
- 	$disponible = comprobar_disponibilidad($con, $paquete, $fecha);
- 	if($disponible == true){
- 		$stmt = mysqli_prepare($con, "insert into reserva(usuario, fecha, paquete) values(?, ?, ?);");
- 		mysqli_stmt_bind_param($stmt, "iii", $usuario, $fecha, $paquete);
- 		$resultado = mysqli_stmt_execute($stmt);
- 		return $resultado;
- 	}
- 	return false;
- }
+function crear_reserva($con, $usuario, $fecha, $paquete)
+{
+    $disponible = comprobar_disponibilidad($con, $paquete, $fecha);
+    if ($disponible == true) {
+        $stmt = mysqli_prepare($con, "insert into reserva(usuario, fecha, paquete) values(?, ?, ?);");
+        mysqli_stmt_bind_param($stmt, "iii", $usuario, $fecha, $paquete);
+        $resultado = mysqli_stmt_execute($stmt);
+        return $resultado;
+    }
+    return false;
+}
 
- function comprobar_disponibilidad($con, $paquete, $fecha){
+function comprobar_disponibilidad($con, $paquete, $fecha)
+{
     $stmt = mysqli_prepare($con, "SELECT * FROM reserva WHERE paquete = ? AND fecha = ?");
     mysqli_stmt_bind_param($stmt, "is", $paquete, $fecha);
     mysqli_stmt_execute($stmt);
@@ -165,13 +180,14 @@ function obtener_paquete($con, $id){
     $reserva = mysqli_fetch_array($result);
     mysqli_stmt_close($stmt);
 
-    if($reserva){
+    if ($reserva) {
         return false;
     }
     return true;
 }
 
-function borrar_reservas($con, $codigos){
+function borrar_reservas($con, $codigos)
+{
     $placeholders = rtrim(str_repeat('?,', count($codigos)), ',');
     $consulta = "DELETE FROM reserva WHERE id_reserva IN ($placeholders)";
     $stmt = mysqli_prepare($con, $consulta);
@@ -184,13 +200,14 @@ function borrar_reservas($con, $codigos){
     return $resultado;
 }
 
- /*NO necesito aplicar una consulta preparada, NO APLICAMOS EL BORRAR TODAS A LA VEZ*/
- /*function borrar_todas_reservas($con){
+/*NO necesito aplicar una consulta preparada, NO APLICAMOS EL BORRAR TODAS A LA VEZ*/
+/*function borrar_todas_reservas($con){
  	$consulta = "delete from reserva";
  	mysqli_query($con, $consulta);
  }*/
 
- function obtener_reservas($con){
+function obtener_reservas($con)
+{
     $consulta = "SELECT r.id_reserva, u.nombre, p.nombre_paquete AS nombre_paquete, r.fecha
                 FROM reserva r
                 INNER JOIN paquete p ON r.paquete = p.id_paquete
@@ -204,7 +221,8 @@ function borrar_reservas($con, $codigos){
     return $result;
 }
 
- function obtener_mis_reservas($con, $id){
+function obtener_mis_reservas($con, $id)
+{
     $consulta = "SELECT id_reserva, usuario, nombre, fecha 
                  FROM reserva 
                  INNER JOIN paquete ON reserva.paquete = paquete.id_paquete 
@@ -217,5 +235,3 @@ function borrar_reservas($con, $codigos){
 
     return $result;
 }
-
-?>

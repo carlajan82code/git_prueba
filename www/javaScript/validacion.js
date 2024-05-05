@@ -63,11 +63,11 @@ function validar_registro() {
   }
 
   if (validacion == true) {
-   
-   
- 
-   location.href="registro_validacion";
-    return true; 
+
+
+
+    location.href = "registro_validacion";
+    return true;
   }
 
   return false; // Detener el envío del formulario si hay errores de validación
@@ -79,7 +79,7 @@ function validar_login() {
   var mail = document.getElementById("mail").value;
   var password = document.getElementById("contrasena").value;
 
- 
+
 
   if (!ValidaEmail(mail)) {
     let contenido_email = document.getElementById("email_login");
@@ -97,8 +97,8 @@ function validar_login() {
     let mensaje = document.createElement("p");
     contenido_pass.appendChild(mensaje);
     mensaje.innerHTML = "<p style='color:#F5E644'>La contraseña ingresada no es válida. Por favor, verifica tu contraseña y asegúrate de que esté escrita correctamente</p>";
-    
-      return false;
+
+    return false;
   }
 
   setTimeout(function () {

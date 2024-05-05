@@ -12,23 +12,22 @@ echo "<div class='contenedor-tabla'>
 		<div class='col col-3'>MODIFICAR</div>
 		<div class='col col-4'>BORRAR</div>
 	</li>";
-	while($fila = obtener_resultados($resultado)){
-		extract($fila);
-		echo "<li class='tabla-fila'>
+while ($fila = obtener_resultados($resultado)) {
+	extract($fila);
+	echo "<li class='tabla-fila'>
 			<div class='col col-1' data-label='NOMBRE'>$nombre</div>
 			<div class='col col-2' data-label='TIPO'>";
-			if($tipo==0){
-				echo "ADMIN";
-			}
-			else{
-				echo "USER";
-			}
-			echo "</div>
+	if ($tipo == 0) {
+		echo "ADMIN";
+	} else {
+		echo "USER";
+	}
+	echo "</div>
 			<div class='col col-3' data-label='MODIFICAR'><a href='modificarusuario.php?id=$id_usuario'>Modificar</a></div>
 			<div class='col col-4' style='text-align:center;' data-label='BORRAR'><input type='checkbox' name='borrar[]' value='$id_usuario'</div>
 		</li>";
-	}
-	echo "<li class='tabla-fila'>
+}
+echo "<li class='tabla-fila'>
 			<div class='col col-unica' style='text-align:right; padding-right:40px;' data-label='ACCIÓN'><input type='submit' value='Borrar'/></div>
 	</li>
 	</form></ul>
@@ -57,4 +56,3 @@ echo "<div class='contenedor-tabla'><ul class='responsive-tabla'>
 	</li>
 	</form></ul></div>";
 echo "<hr>";
-?>
