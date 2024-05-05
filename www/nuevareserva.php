@@ -8,7 +8,7 @@ if ($result == false) {
 }
 cerrar_conexion($con);
 header("Location: user_page.php");
-<?php 
+// <?php 
 if (!isset($_POST["paqueteId"])) {
 	header("Location:index.php");
 	die;

@@ -159,17 +159,17 @@ function obtener_paquete($con, $id)
 //////////////////////////////////////////////
 //////////////////////////////////////////////
 
-function crear_reserva($con, $usuario, $fecha, $paquete)
-{
-    $disponible = comprobar_disponibilidad($con, $paquete, $fecha);
-    if ($disponible == true) {
-        $stmt = mysqli_prepare($con, "insert into reserva(usuario, fecha, paquete) values(?, ?, ?);");
-        mysqli_stmt_bind_param($stmt, "iii", $usuario, $fecha, $paquete);
-        $resultado = mysqli_stmt_execute($stmt);
-        return $resultado;
-    }
-    return false;
-}
+// function crear_reserva($con, $usuario, $fecha, $paquete)
+// {
+//     $disponible = comprobar_disponibilidad($con, $paquete, $fecha);
+//     if ($disponible == true) {
+//         $stmt = mysqli_prepare($con, "insert into reserva(usuario, fecha, paquete) values(?, ?, ?);");
+//         mysqli_stmt_bind_param($stmt, "iii", $usuario, $fecha, $paquete);
+//         $resultado = mysqli_stmt_execute($stmt);
+//         return $resultado;
+//     }
+//     return false;
+// }
  function crear_reserva($con, $usuario, $fecha, $paquete){
  	$disponible = comprobar_disponibilidad($con, $paquete, $fecha);
  	if($disponible == true){
@@ -231,23 +231,25 @@ function obtener_reservas($con)
     return $result;
 }
 
-function obtener_mis_reservas($con, $id)
-{
-    $consulta = "SELECT id_reserva, usuario, nombre, fecha 
-                 FROM reserva 
-                 INNER JOIN paquete ON reserva.paquete = paquete.id_paquete 
+// function obtener_mis_reservas($con, $id)
+// {
+//     $consulta = "SELECT id_reserva, usuario, nombre, fecha 
+//                  FROM reserva 
+//                  INNER JOIN paquete ON reserva.paquete = paquete.id_paquete"; 
+// }
  function obtener_mis_reservas($con, $id){
-    $consulta = "SELECT r.id_reserva AS id_reserva, 
+    $consulta = 'SELECT r.id_reserva AS id_reserva, 
                     p.nombre_paquete AS nombre, 
                     r.fecha AS fecha
                  FROM reserva AS r
                  INNER JOIN paquete AS p ON r.paquete = p.id_paquete 
-                 WHERE usuario = ?";
+                 WHERE usuario = ?;';
     $stmt = mysqli_prepare($con, $consulta);
-    mysqli_stmt_bind_param($stmt, "i", $id);
+    mysqli_stmt_bind_param($stmt, 'i', $id);
     mysqli_stmt_execute($stmt);
     $result = mysqli_stmt_get_result($stmt);
     mysqli_stmt_close($stmt);
 
     return $result;
-}
+    }
+
