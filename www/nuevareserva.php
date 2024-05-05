@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 session_start();
 require_once("database.php");
@@ -9,7 +8,6 @@ if ($result == false) {
 }
 cerrar_conexion($con);
 header("Location: user_page.php");
-=======
 <?php 
 if (!isset($_POST["paqueteId"])) {
 	header("Location:index.php");
@@ -35,4 +33,3 @@ $_SESSION['paqueteId'] = $_POST["paqueteId"];
 <script src='javaScript/validacion.js'></script>
 </body>
 </html>
->>>>>>> a110c13e6c14b7cfd183ce39f030bdf60ee1c55a
