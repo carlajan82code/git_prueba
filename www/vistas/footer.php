@@ -17,7 +17,7 @@
 		<!--  iconos RRSS -->
 		<div class="footer_redes">
 			<a href="https://www.instagram.com" target="_blank">
-				<img src="./img/instagram.png" alt="red Instragram"  width="40px"></a>
+				<img src="./img/instagram.png" alt="red Instragram" width="40px"></a>
 
 			<a href="https://twitter.com" target="_blank">
 				<img src="./img/twiter.png" alt="red twiter" width="40px"></a>
