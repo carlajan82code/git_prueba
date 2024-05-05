@@ -54,7 +54,6 @@ echo "<h1>Crear nuevo usuario</h1>
 			</select>
 		</div>
 	</li>
-<<<<<<< HEAD
 	<li class='tabla-fila'>
 			<div class='col col-unica' style='text-align:right; padding-right:40px;' data-label='ACCIÓN'><input type='submit' value='Crear'/></div>
 	</li>
@@ -62,7 +61,3 @@ echo "<h1>Crear nuevo usuario</h1>
 	<script src='javaScript/validacion.js'></script>
 	<hr>";
 ?>
-=======
-	</form></ul></div>";
-echo "<hr>";
->>>>>>> 5d6b1c965d65f41bc2ef32d15de0697eb3a54965
