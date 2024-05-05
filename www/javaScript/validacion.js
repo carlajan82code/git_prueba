@@ -316,3 +316,107 @@ function validar_formulario_contacto() {
 
   return validacion;
 }
+/* ---- VALIDACION CREAR USUARIO ---- */
+
+function validar_crear_usuario() {
+  let contenedor_nombre = document.getElementById("contenedor_nombre");
+  let nombre = contenedor_nombre.getElementsByTagName("input")[0].value;
+  let contenedor_contrasena = document.getElementById("contenedor_contrasena");
+  let contrasena = contenedor_contrasena.getElementsByTagName("input")[0].value;
+  let contenedor_mail = document.getElementById("contenedor_mail");
+  let mail = contenedor_mail.getElementsByTagName("input")[0].value;
+
+  let errorNombre = contenedor_nombre.getElementsByTagName("p");
+  let errorContrasena = contenedor_contrasena.getElementsByTagName("p");
+  let errorMail = contenedor_mail.getElementsByTagName("p");
+
+  if (nombre == "") { //Si está vacío
+    if (errorNombre.length == 0) { //Si todavía no hay un mensaje de error
+      let mensaje_error = document.createElement("p");
+      mensaje_error.style.color = "red";
+      mensaje_error.textContent = "Nombre es requerido";
+      contenedor_nombre.appendChild(mensaje_error);
+    }
+  } else { //Si no está vacío
+    if (errorNombre.length > 0) {
+      contenedor_nombre.removeChild(errorNombre[0]);
+    }
+  }
+  if (!ValidarPassword(contrasena)) {
+    if(errorContrasena.length == 0){
+      let mensaje_error = document.createElement("p");
+      mensaje_error.style.color = "red";
+      mensaje_error.textContent = "Contraseña no válida";
+      contenedor_contrasena.appendChild(mensaje_error);
+    }
+  }else { //Si no está vacío
+    if (errorContrasena.length > 0) {
+      contenedor_contrasena.removeChild(errorNombre[0]);
+    }
+  }
+
+  if (!ValidaEmail(mail)) {
+    if(errorMail.length == 0){
+      let mensaje_error = document.createElement("p");
+      mensaje_error.style.color = "red";
+      mensaje_error.textContent = "Mail no valido";
+      contenedor_mail.appendChild(mensaje_error);
+    }
+  }else { //Si no está vacío
+    if (errorMail.length > 0) {
+      contenedor_mail.removeChild(errorNombre[0]);
+    }
+  }
+
+  if (nombre != "" && ValidarPassword(contrasena) && ValidaEmail(mail)) {
+    return true;
+  } else {
+    return false;
+  }
+
+}
+/* ---- VALIDACION MODIFICAR USUARIO ---- */
+function validar_modificar_usuario() {
+
+  let contenedor_nombre = document.getElementById("contenedor_nombre");
+  let nombre = contenedor_nombre.getElementsByTagName("input")[0].value;
+  let contenedor_contrasena = document.getElementById("contenedor_contrasena");
+  let contrasena = contenedor_contrasena.getElementsByTagName("input")[0].value;
+
+  let errorNombre = contenedor_nombre.getElementsByTagName("p");
+  let errorContrasena = contenedor_contrasena.getElementsByTagName("p");
+  if (nombre == "") { //Si está vacío
+    if (errorNombre.length == 0) { //Si todavía no hay un mensaje de error
+      let mensaje_error = document.createElement("p");
+      mensaje_error.style.color = "red";
+      mensaje_error.textContent = "Nombre es requerido";
+      contenedor_nombre.appendChild(mensaje_error);
+    }
+  } else { //Si no está vacío
+    if (errorNombre.length > 0) {
+      contenedor_nombre.removeChild(errorNombre[0]);
+    }
+  }
+  if (!ValidarPassword(contrasena)) {
+    if(errorContrasena.length == 0){
+      let mensaje_error = document.createElement("p");
+      mensaje_error.style.color = "red";
+      mensaje_error.textContent = "Contraseña no válida";
+      contenedor_contrasena.appendChild(mensaje_error);
+    }
+  }else { //Si no está vacío
+    if (errorNombre.length > 0) {
+      contenedor_contrasena.removeChild(errorNombre[0]);
+    }
+  }
+
+ /* setTimeout(function () { No quiero que redireccione para que el usuario pueda corregir
+    location.reload();
+  }, 5000);*/
+
+  if (nombre != "" && ValidarPassword(contrasena)) {
+    return true;
+  } else {
+    return false;
+  }
+}
