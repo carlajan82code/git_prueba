@@ -63,17 +63,11 @@ function validar_registro() {
   }
 
   if (validacion == true) {
-    // Si la validacion es correcta, ejecutar setTimeout
-    setTimeout(function () {
-      // Borrar los mensajes de error después de 5 segundos
-      document.getElementById("nombre_registro").innerHTML = "";
-      document.getElementById("email_registro").innerHTML = "";
-      document.getElementById("contrasena_registro").innerHTML = "";
-    }, 5000); 
-
-    // Si la validacion es correcta redirecciona a enrutador.php para validacion php//
-    alert("En construccion");
-    return true; // Permitir el envío del formulario si la validación es exitosa
+   
+   
+ 
+   location.href="registro_validacion";
+    return true; 
   }
 
   return false; // Detener el envío del formulario si hay errores de validación
@@ -84,6 +78,8 @@ function validar_registro() {
 function validar_login() {
   var mail = document.getElementById("mail").value;
   var password = document.getElementById("contrasena").value;
+
+ 
 
   if (!ValidaEmail(mail)) {
     let contenido_email = document.getElementById("email_login");
@@ -100,9 +96,9 @@ function validar_login() {
     let contenido_pass = document.getElementById("pass_login");
     let mensaje = document.createElement("p");
     contenido_pass.appendChild(mensaje);
-    mensaje.innerHTML =
-      "<p style='color:#F5E644'>La contraseña ingresada no es válida. Por favor, verifica tu contraseña y asegúrate de que esté escrita correctamente</p>";
-    return false;
+    mensaje.innerHTML = "<p style='color:#F5E644'>La contraseña ingresada no es válida. Por favor, verifica tu contraseña y asegúrate de que esté escrita correctamente</p>";
+    
+      return false;
   }
 
   setTimeout(function () {

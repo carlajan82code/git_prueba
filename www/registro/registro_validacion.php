@@ -2,6 +2,7 @@
 session_start();
 require_once ("../database.php");
 
+
 $registro = $_POST['registro'];
 $mail = $_POST['mail'];
 $nombre = $_POST['nombre'];
@@ -28,6 +29,29 @@ $resultado = crear_usuario($con, $nombre, $contrasena, 1);
 
 if (!$resultado) {
     echo "No se pudo crear el usuario";
+}else{
+ 
+   echo "<!DOCTYPE html>
+   <html lang='es'>
+   <head>
+	   <meta charset='UTF-8'>
+	   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	   <title>Registro Exitoso</title>
+	   <link rel='stylesheet' href='style.css'>
+	
+	   <link rel='stylesheet' href='estilos.css'>
+   </head>
+   <body>
+	   <div class='container_bienvenida'>
+		   <h1>¡Registro Exitoso!</h1>
+		   <p>¡Felicidades ".ucfirst($nombre)." te has registrado correctamente!</p>
+		   <p><a href='../login.php'>Inicia sesión</a> para comenzar a dar tus primeros pasos hacia la Luna.</p>
+	   </div>
+   </body>
+   </html>";
+
+
+
 }
 
 function validaEmail($mail){
