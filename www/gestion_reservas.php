@@ -3,7 +3,7 @@ echo "<h1>Gestión de Reservas</h1>";
 $resultado = obtener_reservas($con);
 $num_filas = obtener_num_filas($resultado);
 if($num_filas == 0){
-	echo "No hay reservas.<br/>";
+	echo "<div>No hay reservas</div><br/>";
 }
 else{
 	echo "<div class='contenedor-tabla'><ul class='responsive-tabla'>
