@@ -38,13 +38,14 @@ if (isset($_POST['contacto'])) {
 
         $mail->SMTPDebug = 0;
         $mail->isSMTP();                                            //Send using SMTP
-        $mail->Host       = 'smtp.office365.com';   
+        $mail->Host = 'smtp-mail.outlook.com'; 
+          
         //Servers
-        $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'seyfert@outlook.es';                     //SMTP username
-        $mail->Password   = 'grupo142024';                               //SMTP password
+        $mail->SMTPAuth = true;                                   //Enable SMTP authentication
+        $mail->Username = 'seyfert@outlook.es';                     //SMTP username
+        $mail->Password = 'grupo142024';                               //SMTP password
         $mail->SMTPSecure = 'STARTTLS';            //Enable implicit TLS encryption
-        $mail->Port       = 587; 
+        $mail->Port = 587; 
     //Recipients
     $mail->setFrom('carlajan82@hotmail.com'); 
     $mail->addAddress('rojascarlajanet@gmail.com');
