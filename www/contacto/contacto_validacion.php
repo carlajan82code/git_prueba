@@ -41,8 +41,8 @@ if (isset($_POST['contacto'])) {
         $mail->Host       = 'smtp.office365.com';   
         //Servers
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'carlajan82@hotmail.com';                     //SMTP username
-        $mail->Password   = 'Frida1982';                               //SMTP password
+        $mail->Username   = 'seyfert@outlook.es';                     //SMTP username
+        $mail->Password   = 'grupo142024';                               //SMTP password
         $mail->SMTPSecure = 'STARTTLS';            //Enable implicit TLS encryption
         $mail->Port       = 587; 
     //Recipients
