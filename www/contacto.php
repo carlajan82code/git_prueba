@@ -26,28 +26,20 @@
         <h2>Formulario de Contacto</h2>
         <form method="post" action="contacto/contacto_validacion.php" onsubmit="return validar_formulario_contacto()">
             <div class="form-group" id="div-nombre">
-                <label for="nombre">Primer Nombre*:</label>
+                <label for="nombre">Nombre*:</label>
                 <input type="text" id="nombre" name="nombre" minlength="2" maxlength="20" tabindex="1">
-            </div>
-            <div class="form-group" id="div-apellido">
-                <label for="apellido">Apellido*:</label>
-                <input type="text" id="apellido" name="apellido" minlength="2" maxlength="20" tabindex="2">
             </div>
             <div class="form-group" id="div-mail">
                 <label for="mail">Email*:</label>
                 <input type="text" id="mail" name="mail" minlength="2" maxlength="20" tabindex="3">
             </div>
             <div class="form-group" id="div-telefono">
-                <label for="telefono">Número de Teléfono*:</label>
+                <label for="telefono">Teléfono*:</label>
                 <input type="tel" id="telefono" name="telefono" minlength="6" tabindex="4">
             </div>
             <div class="form-group" id="div-direccion_1">
-                <label for="direccion1">Dirección 1*:</label>
+                <label for="direccion1">Dirección*:</label>
                 <input type="text" id="direccion1" name="direccion1" minlength="6" maxlength="50" tabindex="5">
-            </div>
-            <div class="form-group" id="direccion_2">
-                <label for="direccion2">Dirección 2:</label>
-                <input type="text" id="direccion2" name="direccion2" minlength="6" maxlength="50" tabindex="6">
             </div>
             <div class="form-group" id="div-ciudad">
                 <label for="ciudad">Ciudad*:</label>
