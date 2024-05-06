@@ -276,7 +276,6 @@ body {
     display: flex;
     gap: 10px;
     margin-bottom: 40px;
-
 }
 
 .entrada-blog:last-child {
@@ -288,9 +287,43 @@ body {
     width: 200px;
     margin-left: 30px;
     border-radius: 10px;
-
 }
 
+/* Blog */
+
+.cabecera_entrada_blog{
+    margin-top: 30px;
+}
+
+.subtitulo_blog{
+    text-align: center;
+    color: var(--colorNaranja);
+    margin-bottom: 30px;
+}
+.entrada-imagen_blog{
+    width: 400px;
+   
+}
+
+.bloque_imgEntrada{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.texto_entrada_blog{
+
+    width: 600px;
+    margin: auto;
+}
+
+.parrafo_entrada_blog{
+    line-height: 1.8;
+    font-size: 18px;
+    text-wrap: balance;
+    text-align: justify;
+    margin-bottom: 10px;
+}
 
 .texto-entrada--titulo {
     margin-bottom: 20px;

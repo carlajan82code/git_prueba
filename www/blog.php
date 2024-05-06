@@ -27,7 +27,7 @@ include_once("./vistas/header.php");
                     inmortal e imborrable
 
                 </p>
-                <a class="texto-entrada--boton" href="entrada.php">Ver Publicación</a>
+                <a class="texto-entrada--boton" href="./blog/comiendo_sushi.php">Ver Publicación</a>
             </div>
 
         </article>
