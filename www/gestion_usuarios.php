@@ -5,7 +5,7 @@ $num_filas = obtener_num_filas($resultado);
 
 echo "<div class='contenedor-tabla'>
 	<ul class='responsive-tabla'>
-	<form method='post' action='borrarusuarios.php'>
+	<form method='post' action='borrarusuarios.php' name='form_usuarios' id='form_usuarios'>
 	<li class='tabla-header'>
 		<div class='col col-1'>NOMBRE</div>
 		<div class='col col-2'>TIPO</div>
@@ -28,7 +28,7 @@ while ($fila = obtener_resultados($resultado)) {
 		</li>";
 }
 echo "<li class='tabla-fila'>
-			<div class='col col-unica' style='text-align:right; padding-right:40px;' data-label='ACCIÓN'><input type='submit' value='Borrar'/></div>
+			<div class='col col-unica' style='text-align:right; padding-right:40px;' data-label='ACCIÓN'><input type='submit' name='borrar_usuario' id='borrar_usuario' value='Borrar' disabled /></div>
 	</li>
 	</form></ul>
 	</div>

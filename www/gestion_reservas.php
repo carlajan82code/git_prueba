@@ -7,7 +7,7 @@ if($num_filas == 0){
 }
 else{
 	echo "<div class='contenedor-tabla'><ul class='responsive-tabla'>
-		<form method='post' action='borrarreservas.php'>
+		<form method='post' action='borrarreservas.php' name='form_reservas' id='form_reservas'>
 		<li class='tabla-header'>
 			<div class='col col-1'>USUARIO</div>
 			<div class='col col-2'>PAQUETE</div>
@@ -24,7 +24,7 @@ else{
 				</li>";
 	}
 	echo "<li class='tabla-fila'>
-		<div class='col col-unica' style='text-align:right; padding-right:40px;' data-label='ACCIÓN'><input type='submit' name='Borrar' value='Borrar'/></div>
+		<div class='col col-unica' style='text-align:right; padding-right:40px;' data-label='ACCIÓN'><input type='submit' name='Borrar' id='borrar_reserva' value='Borrar' disabled /></div>
 		</li>
 		</form></ul></div>";
 }

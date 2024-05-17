@@ -427,3 +427,47 @@ function validarReserva(){
   errorLabel.innerText = "";
   return true;
 }
+
+// control de errores al borrar usuarios y reservas
+
+// funcion para poder habilitar el boton de borrar usuario, unicamente si hay por lo menos un elemento seleccionado
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Selecciona todos los checkboxes dentro del formulario 'form_usuarios'
+    var checkboxes = document.querySelectorAll("form[name='form_usuarios'] input[type='checkbox']");
+    var deleteButton = document.getElementById("borrar_usuario");
+
+    function toggleDeleteButton() {
+        // Comprueba si al menos un checkbox está marcado
+        var isChecked = Array.from(checkboxes).some(function(checkbox) {
+            return checkbox.checked;
+        });
+        deleteButton.disabled = !isChecked;
+    }
+
+    // Agrega un evento de cambio a cada checkbox
+    checkboxes.forEach(function(checkbox) {
+        checkbox.addEventListener('change', toggleDeleteButton);
+    });
+  });
+
+  // De la misma manera para el caso de las reservas 
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Selecciona todos los checkboxes dentro del formulario 'form_usuarios'
+    var checkboxes = document.querySelectorAll("form[name='form_reservas'] input[type='checkbox']");
+    var deleteButton = document.getElementById("borrar_reserva");
+
+    function toggleDeleteButton() {
+        // Comprueba si al menos un checkbox está marcado
+        var isChecked = Array.from(checkboxes).some(function(checkbox) {
+            return checkbox.checked;
+        });
+        deleteButton.disabled = !isChecked;
+    }
+
+    // Agrega un evento de cambio a cada checkbox
+    checkboxes.forEach(function(checkbox) {
+        checkbox.addEventListener('change', toggleDeleteButton);
+    });
+  });
