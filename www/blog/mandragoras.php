@@ -47,23 +47,27 @@
 
 <main>
 
-<h1 class="cabecera_entrada_blog">Comer sushi en la Luna</h1>
-<h2 class="subtitulo_blog">Una experiencia gastronómica fuera de este mundo: Comer sushi en la Luna</h2>
+<h1 class="cabecera_entrada_blog">Plantando Mandragoras en la Luna</h1>
+<h2 class="subtitulo_blog">Cultivando Mandrágoras en la Luna: Un Proyecto Mágico y Científico</h2>
 
     <picture class="bloque_imgEntrada">
-        <source srcset="../img/blog1.webp" type="image/webp">
-        <source srcset="../img/blog1.jpg" type="image/jpg">
-        <img class="entrada-imagen_blog" loading="lazy" src="../img/blog1.jpg"" alt=" Texto entrada Blog">
+        <source srcset="../img/blog2.webp" type="image/webp">
+        <source srcset="../img/blog2.jpg" type="image/jpg">
+        <img class="entrada-imagen_blog" loading="lazy" src="../img/blog2.jpg"" alt=" Texto entrada Blog">
     </picture>
 <div class="texto_entrada_blog">
 <p class="parrafo_entrada_blog">
-Imagina flotar en la vastedad del espacio, con la Tierra como una esfera azul brillante en el horizonte lunar,
- mientras sostienes delicadamente un trozo de sushi entre tus dedos. Esta no es una escena de ciencia ficción,
-  sino una posibilidad real en el futuro cercano. La exploración espacial ha avanzado tanto que incluso la 
-  comida, uno de los placeres más terrenales, ha encontrado su camino hasta la Luna.</p>
+Las mandrágoras, conocidas por sus raíces humanoides y su poderoso grito, 
+han sido un desafío interesante para nuestros astronautas y botánicos lunares. 
+La primera etapa del proyecto involucró la creación de un invernadero especial, 
+equipado con tecnología avanzada que simula las condiciones terrestres necesarias 
+para el crecimiento de estas plantas mágicas. La estructura, instalada en el Mare Tranquillitatis, proporciona 
+un ambiente controlado con niveles adecuados de oxígeno, humedad y luz.</p>
 <p class="parrafo_entrada_blog">
-El sushi, con su mezcla única de sabores y texturas, ha sido adaptado para la vida en el espacio, convirtiéndose en una opción popular entre los astronautas. Pero, ¿cómo es la experiencia de comer sushi en la Luna?
-Para empezar, la ingravidez añade un giro intrigante a esta experiencia culinaria, con estrellas parpadeantes y la superficie lunar extendiéndose hasta donde alcanza la vista. Es una experiencia que te conecta con la inmensidad del universo de una manera única.
+El propósito de este proyecto es doble: por un lado, explorar nuevas fronteras en la agricultura espacial, y por otro, mantener viva la chispa de la imaginación 
+y la magia en nuestras aventuras cósmicas. 
+Imagina un futuro donde las mandrágoras sean solo el comienzo de una serie de cultivos mágicos y científicos en nuestro satélite natural. En esta era de descubrimientos, 
+los límites son solo el comienzo de nuevas posibilidades.
 
 </p>
 </div>
