@@ -828,6 +828,10 @@ hr {
     cursor: pointer;
 }
 
+.up-mis-reservas-btn{
+    margin: 20px;
+}
+
 /** MIS RESERVAS */
 #mis-reservas-body{
     background-image: url(../img/astronomy-1867616_1920.jpg);
@@ -845,8 +849,8 @@ hr {
         #listado-reservas{
             width: 40%;
             padding: 5px;
-            border: 2px solid rgb(39, 39, 108);
             border-radius: 5%;
+            border: 2px solid rgb(39, 39, 108);
             background-color: rgba(126, 126, 174, 0.623);
         }
     }
