@@ -239,6 +239,7 @@ function obtener_reservas($con)
 // }
  function obtener_mis_reservas($con, $id){
     $consulta = 'SELECT r.id_reserva AS id_reserva, 
+                    r.paquete AS paquete_id,
                     p.nombre_paquete AS nombre, 
                     r.fecha AS fecha
                  FROM reserva AS r

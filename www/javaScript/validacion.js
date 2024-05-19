@@ -416,7 +416,7 @@ function validar_modificar_usuario() {
     return false;
   }
 }
-
+/* ---- VALIDACION RESERVA ---- */
 function validarReserva(){
   let fecha = document.getElementById("fecha").value;
   let errorLabel = document.getElementById("error");
