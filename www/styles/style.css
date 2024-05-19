@@ -832,7 +832,13 @@ hr {
     margin: 20px;
 }
 
-/** MIS RESERVAS */
+/** NUEVA RESERVA - MIS RESERVAS  */
+#nueva-reserva-contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #mis-reservas-body{
     background-image: url(../img/astronomy-1867616_1920.jpg);
     background-repeat: no-repeat;

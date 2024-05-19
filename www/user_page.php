@@ -34,6 +34,6 @@ $resultadoPaquete = mysqli_query($con, "SELECT * FROM paquete;");
 </div>
 </form>
 
-<div class="up-mis-reservas-btn"><a class="texto-entrada--boton up-mis-reservas-btn" href="mis_reservas.php">Mis reservas</a></div>
+<div class="up-mis-reservas-btn"><a class="texto-entrada--boton" href="mis_reservas.php">Mis reservas</a></div>
 
 <script src='javaScript/user_page.js'></script>
