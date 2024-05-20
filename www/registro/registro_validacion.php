@@ -25,7 +25,7 @@ if ($contrasena !== $conf_contrasena) {
 }
 
 $con = conectar();
-$resultado = crear_usuario($con, $nombre, $contrasena, 1);
+$resultado = crear_usuario($con, $nombre, $mail, $contrasena, 1);
 
 if (!$resultado) {
 	echo "No se pudo crear el usuario";
