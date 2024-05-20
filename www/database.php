@@ -105,11 +105,11 @@ function borrar_usuarios($con, $codigos){
     return $resultado;
 }*/
 
-function modificar_usuario($con, $id_usuario, $nombre, $pass, $tipo)
+function modificar_usuario($con, $id_usuario, $nombre, $mail, $pass, $tipo)
 {
     $password = password_hash($pass, PASSWORD_DEFAULT);
-    $stmt = mysqli_prepare($con, "update usuario set nombre=?, pass=?, tipo=? where id_usuario=?");
-    mysqli_stmt_bind_param($stmt, "ssii", $nombre, $password, $tipo, $id_usuario);
+    $stmt = mysqli_prepare($con, "update usuario set nombre=?, mail=?, pass=?, tipo=? where id_usuario=?");
+    mysqli_stmt_bind_param($stmt, "sssii", $nombre, $mail, $password, $tipo, $id_usuario);
     mysqli_stmt_execute($stmt);
 }
 
