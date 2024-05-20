@@ -63,11 +63,11 @@ function cerrar_conexion($con)
 //////////////////////////////////////////////
 //////////////////////////////////////////////
 
-function crear_usuario($con, $nombre, $pass, $tipo)
+function crear_usuario($con, $nombre, $mail, $contrasena, $tipo)
 {
-    $password = password_hash($pass, PASSWORD_DEFAULT);
-    $stmt = mysqli_prepare($con, "insert into usuario(nombre, pass, tipo) values(?,?,?);");
-    mysqli_stmt_bind_param($stmt, "ssi", $nombre, $password, $tipo);
+    $password = password_hash($contrasena, PASSWORD_DEFAULT);
+    $stmt = mysqli_prepare($con, "insert into usuario(nombre, mail, pass, tipo) values(?,?,?,?);");
+    mysqli_stmt_bind_param($stmt, "sssi", $nombre, $mail, $password, $tipo);
     return mysqli_stmt_execute($stmt);
     //return $resultado;
 }
