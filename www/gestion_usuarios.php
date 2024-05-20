@@ -36,7 +36,7 @@ echo "<li class='tabla-fila'>
 echo "<h1>Crear nuevo usuario</h1>
 
     <div class='contenedor-tabla'><ul class='responsive-tabla'>
-	<form method='post' action='nuevousuario.php' onsubmit='return validar_crear_usuario();'>
+	<form method='post' action='nuevousuario.php' onsubmit='return validar_crearModificar_usuario();'>
 	<li class='tabla-header'>
 		<div class='col col-1'>NOMBRE</div>
 		<div class='col col-2'>MAIL</div>
