@@ -360,7 +360,8 @@ body {
 }
 
 .texto-entrada--boton {
-    padding: 10px;
+    padding: 15px;
+   
     text-decoration: none;
     background-color: var(--color_boton);
     color: var(--blanco);
@@ -826,10 +827,13 @@ hr {
     width: 90%;
     text-shadow: 0px 4px 18px #2c3442;
     cursor: pointer;
+    
 }
 
 .up-mis-reservas-btn{
-    margin: 20px;
+    margin: 50px 0 0 0;
+    text-align: center;
+   
 }
 
 /** NUEVA RESERVA - MIS RESERVAS  */
@@ -850,7 +854,8 @@ hr {
         justify-content: center;
         align-items: center;
         margin-bottom: 20px;
-        color: black;
+        color: white;
+        
         
         #listado-reservas{
             width: 40%;
