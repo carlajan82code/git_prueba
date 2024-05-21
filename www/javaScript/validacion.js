@@ -119,7 +119,7 @@ function validar_formulario_contacto() {
 
   // Obtener valores
   let nombre = document.getElementById("nombre").value;
-  let apellido = document.getElementById("apellido").value;
+  //let apellido = document.getElementById("apellido").value;
   let mail = document.getElementById("mail").value;
   let telefono = document.getElementById("telefono").value;
   let direccion1 = document.getElementById("direccion1").value;
@@ -144,23 +144,6 @@ function validar_formulario_contacto() {
   } else {
     if (errorNombre.length > 0) {
       contenido_nombre.removeChild(errorNombre[0]);
-    }
-  }
-
-  // apellido
-  let contenido_apellido = document.getElementById("div-apellido");
-  let errorApellido = contenido_apellido.getElementsByTagName("p");
-  if (apellido == "") {
-    validacion = false;
-    if (errorApellido.length == 0) {
-      let parrafo = document.createElement("p");
-      parrafo.style.color = "red";
-      parrafo.textContent = "Apellido es requerido";
-      contenido_apellido.appendChild(parrafo);
-    }
-  } else {
-    if (errorApellido.length > 0) {
-      contenido_apellido.removeChild(errorApellido[0]);
     }
   }
 
@@ -312,6 +295,7 @@ function validar_formulario_contacto() {
 
   return validacion;
 }
+
 /* ---- VALIDACION CREAR MODIFICAR USUARIO ---- */
 
 function validar_crearModificar_usuario() {
