@@ -72,7 +72,9 @@ los límites son solo el comienzo de nuevas posibilidades.
 </p>
 </div>
 </main>
-
+<?php
+include_once("../vistas/footer.php");
+?>
 </body>
 </html>
 

@@ -40,4 +40,5 @@ if (isset($_SESSION["id_usuario"])) {
             ?>
         </div>
     </div>
+<?php require_once("vistas/footer.php"); ?>
 </body>

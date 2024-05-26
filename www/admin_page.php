@@ -9,5 +9,4 @@ require_once("gestion_usuarios.php");
 
 // //GESTION RESERVAS
 require_once("gestion_reservas.php");
-include_once("./vistas/footer.php");
 ?>

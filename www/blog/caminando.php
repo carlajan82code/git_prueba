@@ -72,7 +72,9 @@ y descubrimiento que conecta la ciencia ficción de hoy con la realidad de maña
 </p>
 </div>
 </main>
-
+<?php
+include_once("../vistas/footer.php");
+?>
 </body>
 </html>
 

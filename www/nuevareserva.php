@@ -27,5 +27,7 @@ $_SESSION['paqueteId'] = $_POST["paqueteId"];
 </div>
 <script src='javaScript/validacion.js'></script>
 <script src='javaScript/nuevaReserva.js'></script>
+<?php require_once("vistas/footer.php"); ?>
 </body>
 </html>
+

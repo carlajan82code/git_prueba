@@ -99,7 +99,7 @@ body {
 
 /** Footer */
 
-.footer {
+/* .footer {
     background-color: var(--blanco);
 
     width: 100%;
@@ -112,6 +112,7 @@ body {
 
     margin-top: 70px;
     display: flex;
+    flex-direction: row;
     gap: 335px;
     padding: 1%;
 
@@ -125,7 +126,7 @@ body {
 
 .footer_cotenido-logo img {
 
-   margin-left: -170px;
+  margin-left: -170px;
 }
 
 .footer_contenido-contacto {
@@ -142,21 +143,17 @@ body {
     font-weight: bold;
 }
 
-
-/** Footer logo redes sociales*/
-
 .footer_redes {
-
-    gap: 4px;
-    width: 30px;
-    height: 30px;
-    gap: 10px;
     display: flex;
     flex-direction: row;
     cursor: pointer;
 
 }
 
+.redes {
+    width: 30px;
+    height: 30px;
+}
 
 .copi_footer {
 
@@ -165,10 +162,90 @@ body {
     padding: 15px;
     background-color: var(--colorNavegacion);
     color: var(--blanco);
+}  
+
+@media (max-width: 768px) {
+
+    .footer_contenido {
+        flex-direction: column;
+        gap: 10px;
+
+
+    }
+
+    .footer_cotenido-logo {
+
+        display: block;
+        margin: auto;
+
+    }
+
+    .footer_redes {
+
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+
+    }
+
+
 }
 
+*/
 
 
+.footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer_contenido {
+    background-color: var(--blanco);
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 16px 0 16px 0;
+}
+
+.footer_cotenido-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+
+.footer_cotenido-logo img {
+    height: 40px;
+}
+
+.footer_contenido-contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    gap: 10px;
+}
+
+.copy_footer {
+    background-color: var(--colorNavegacion);
+    color: var(--blanco);
+    padding: 20px 0 20px 0;
+}
+
+@media (max-width: 768px) {
+    .footer_contenido {
+        flex-direction: column;
+    }
+}
 
 /** Formulario Registro */
 
@@ -630,34 +707,6 @@ body {
     }
 }
 
-
-/**Responsive footer*/
-@media (max-width: 768px) {
-
-    .footer_contenido {
-        flex-direction: column;
-        gap: 10px;
-
-
-    }
-
-    .footer_cotenido-logo {
-
-        display: block;
-        margin: auto;
-
-    }
-
-    .footer_redes {
-
-        display: flex;
-        justify-content: center;
-        margin-top: 0;
-
-    }
-
-
-}
 
 /** gestion_usuarios y reservas*/
 

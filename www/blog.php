@@ -84,7 +84,7 @@ include_once("./vistas/header.php");
 </div>
 
 
-<footer class="footer">
+<!-- <footer class="footer">
 
     <div class="footer_contenido--blog">
         <div class=footer_cotenido-logo>
@@ -95,9 +95,13 @@ include_once("./vistas/header.php");
     </div>
 
     <div class="copy_foooter--blog">
-        <p>Copyright @ <?php echo date("Y"); ?> All rights reserved by: SEYFERT</p>
+        <p>Copyright @ 2024 All rights reserved by: SEYFERT</p>
     </div>
-</footer>
+</footer> -->
+
+<?php
+include_once("vistas/footer.php");
+?>
 
 </body>
 

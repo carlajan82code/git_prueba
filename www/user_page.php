@@ -37,3 +37,9 @@ $resultadoPaquete = mysqli_query($con, "SELECT * FROM paquete;");
 <div class="up-mis-reservas-btn"><a class="texto-entrada--boton" href="mis_reservas.php">Mis reservas</a></div>
 
 <script src='javaScript/user_page.js'></script>
+
+<div><p>&nbsp;</p></div>
+
+<?php
+require_once ("vistas/footer.php");
+?>

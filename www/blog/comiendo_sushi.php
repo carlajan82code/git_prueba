@@ -68,7 +68,9 @@ Para empezar, la ingravidez añade un giro intrigante a esta experiencia culinar
 </p>
 </div>
 </main>
-
+<?php
+include_once("../vistas/footer.php");
+?>
 </body>
 </html>
 
