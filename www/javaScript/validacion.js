@@ -21,94 +21,107 @@ function validar_registro() {
   let confirmPassword = document.getElementById("conf_contrasena").value;
   let validacion = true;
 
-  if (nombre == "") {
-    let contenido_nombre = document.getElementById("nombre_registro");
-    let parrafo = document.createElement("p");
-    contenido_nombre.appendChild(parrafo);
-    parrafo.innerHTML =
-      "<p style='color:#F5E644'>Nombre debe estar completo</p>";
-    validacion = false;
+  // Limpiar mensajes de error
+  let previousNombreError = document.querySelector("#nombre_registro p");
+  if (previousNombreError) {
+      previousNombreError.remove();
+  }
+  let previousEmailError = document.querySelector("#email_registro p");
+  if (previousEmailError) {
+      previousEmailError.remove();
+  }
+  let previousPasswordError = document.querySelector("#contrasena_registro p");
+  if (previousPasswordError) {
+      previousPasswordError.remove();
+  }
+  let previousConfirmPasswordError = document.querySelector("#confirmar_contrasena_registro p");
+  if (previousConfirmPasswordError) {
+      previousConfirmPasswordError.remove();
   }
 
-  if (!ValidaEmail(mail)) {
-    let contenido_email_registro = document.getElementById("email_registro");
-    let mensaje = document.createElement("p");
-    contenido_email_registro.appendChild(mensaje);
-    mensaje.innerHTML =
-      "<p style='color:#F5E644'>Correo no válido " +
-      mail +
-      " debe contener un @</p>";
-    validacion = false;
-  }
-
-  if (ValidarPassword(password)) {
-    if (password != confirmPassword) {
-      let contenido_password_registro = document.getElementById(
-        "contrasena_registro"
-      );
-      let mensaje = document.createElement("p");
-      contenido_password_registro.appendChild(mensaje);
-      mensaje.innerHTML =
-        "<p style='color:#F5E644'>Las contraseñas no coinciden";
+  // Validar nombre
+  if (nombre === "") {
+      let contenido_nombre = document.getElementById("nombre_registro");
+      let parrafo = document.createElement("p");
+      parrafo.style.color = '#F5E644';
+      parrafo.textContent = "El nombre debe estar completo.";
+      contenido_nombre.appendChild(parrafo);
       validacion = false;
-    }
-  } else {
-    let contenido_password_registro = document.getElementById(
-      "contrasena_registro"
-    );
-    let mensaje = document.createElement("p");
-    contenido_password_registro.appendChild(mensaje);
-    mensaje.innerHTML = "<p style='color:#F5E644'>La contraseña debe tener al menos 8 caracteres,al menos una letra mayúscula, una letra minúscula y un número.";
-    validacion = false;
   }
 
-  if (validacion == true) {
+  // Validar correo 
+  if (!ValidaEmail(mail)) {
+      let contenido_email_registro = document.getElementById("email_registro");
+      let mensaje = document.createElement("p");
+      mensaje.style.color = '#F5E644';
+      mensaje.textContent = `Correo no válido: ${mail} El correo debe contener un '@'`;
+      contenido_email_registro.appendChild(mensaje);
+      validacion = false;
+  }
 
+  // Validar contraseña
+  if (!ValidarPassword(password)) {
+      let contenido_password_registro = document.getElementById("contrasena_registro");
+      let mensaje = document.createElement("p");
+      mensaje.style.color = '#F5E644';
+      mensaje.textContent = "La contraseña debe tener al menos 8 caracteres, incluyendo una letra mayúscula, una letra minúscula y un número.";
+      contenido_password_registro.appendChild(mensaje);
+      validacion = false;
+  } else if (password !== confirmPassword) {
+      let contenido_confirm_password_registro = document.getElementById("confirmar_contrasena_registro");
+      let mensaje = document.createElement("p");
+      mensaje.style.color = '#F5E644';
+      mensaje.textContent = "Las contraseñas no coinciden.";
+      contenido_confirm_password_registro.appendChild(mensaje);
+      validacion = false;
+  }
 
-
-    location.href = "registro_validacion";
-    return true;
+  if (validacion) {
+      location.href = "registro_validacion.php";
+      return true;
   }
 
   return false; // Detener el envío del formulario si hay errores de validación
 }
 
-
 /* ---- VALIDACION LOGIN ---- */
+
 function validar_login() {
   var mail = document.getElementById("mail").value;
   var password = document.getElementById("contrasena").value;
+  var validacion= true;
 
+  // Limpiar mensajes de errores
+  var errorPrevioMail = document.querySelector("#email_login p");
+  if (errorPrevioMail) {
+      errorPrevioMail.remove();
+  }
+  var errorPrevioPass = document.querySelector("#pass_login p");
+  if (errorPrevioPass) {
+    errorPrevioPass.remove();
+  }
 
-
+  // Validar correo electrónico
   if (!ValidaEmail(mail)) {
-    let contenido_email = document.getElementById("email_login");
-    let parrafo = document.createElement("p");
-    contenido_email.appendChild(parrafo);
-    parrafo.innerHTML =
-      "<p style='color:#F5E644'>Usuario no válido " +
-      mail +
-      " debe contener un @</p>";
-    return false;
+      let contenido_email = document.getElementById("email_login");
+      let parrafo = document.createElement("p");
+      parrafo.style.color = '#F5E644';
+      parrafo.textContent = `Usuario no válido: ${mail} El correo debe contener un '@'.`;
+      contenido_email.appendChild(parrafo);
+      validacion = false;
   }
 
+  // Validar contraseña
   if (!ValidarPassword(password)) {
-    let contenido_pass = document.getElementById("pass_login");
-    let mensaje = document.createElement("p");
-    contenido_pass.appendChild(mensaje);
-    mensaje.innerHTML = "<p style='color:#F5E644'>Contraseña incorrecta.</p>";
-
-    return false;
+      let contenido_pass = document.getElementById("pass_login");
+      let mensaje = document.createElement("p");
+      mensaje.style.color = '#F5E644';
+      mensaje.textContent = "Contraseña incorrecta. Debe tener al menos 8 caracteres, incluyendo un número y una letra.";
+      contenido_pass.appendChild(mensaje);
+      validacion = false;
   }
 
-  setTimeout(function () {
-    location.reload();
-  }, 5000);
-
-  if (ValidaEmail(mail) && ValidarPassword(password)) {
-    location.href = "login_validacion.php";
-    return true;
-  }
+  return validacion;
 }
 
 
@@ -128,7 +141,7 @@ function validar_formulario_contacto() {
   let pais = document.getElementById("selectorPais").value;
   let anio = document.getElementById("anio_nacimiento").value;
 
-  // Validaciones requeridos
+ 
   // Nombre
   let contenido_nombre = document.getElementById("div-nombre");
   let errorNombre = contenido_nombre.getElementsByTagName("p");
