@@ -43,19 +43,19 @@
             </div>
             <div class="form-group" id="div-ciudad">
                 <label for="ciudad">Ciudad*:</label>
-                <input type="text" id="ciudad" name="ciudad" minlength="2" maxlength="10" tabindex="7">
+                <input type="text" id="ciudad" name="ciudad" minlength="2" maxlength="10" tabindex="6">
             </div>
             <div class="form-group" id="div-estado">
                 <label for="estado">Estado/Provincia*:</label>
-                <input type="text" id="estado" name="estado" minlength="2" maxlength="10" tabindex="8">
+                <input type="text" id="estado" name="estado" minlength="2" maxlength="10" tabindex="7">
             </div>
             <div class="form-group" id="div-codigoP">
                 <label for="codigo_postal">Código Postal*:</label>
-                <input type="text" id="codigoPostal" name="codigo_postal" minlength="2" maxlength="10" tabindex="9">
+                <input type="text" id="codigoPostal" name="codigo_postal" minlength="2" maxlength="10" tabindex="8">
             </div>
             <div class="form-group" id="div-pais">
                 <label for="pais">País*:</label>
-                <select id="selectorPais" name="pais"></select>
+                <select id="selectorPais" name="pais" id="pais"></select>
             </div>
             <div class="form-group" id="div-anio">
                 <label for="anio_nacimiento">Año de Nacimiento*:</label>
