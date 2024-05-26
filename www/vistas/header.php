@@ -5,9 +5,8 @@
 
 			<div class="enlaces-nav">
 				<a class="navegacion_contenido--enlace" href="/registro.php" aria-label="Enlace a  Registro">Registrarse</a>
-				<a class="navegacion_contenido--enlace" href="/login.php" aria-label="Enlace a Login"v>Log-in</a>
+				<a class="navegacion_contenido--enlace" href="/login.php" aria-label="Enlace a Login">Log-in</a>
 				<a class="navegacion_contenido--enlace" href="/galeria.php" aria-label="Enlace a Galeria">Galeria</a>
-
 			</div>
 			<!-- <a class="nav-link" href="../index.php?log-out">Log-out</a> -->
 
@@ -25,9 +24,7 @@
 				</svg>
 
 				<a class="navegacion_contenido--boton" href="/blog.php" aria-label="Enlace a Blog">blog</a>
-
 			</div>
-
 		</div>
 	</nav>
 </header>

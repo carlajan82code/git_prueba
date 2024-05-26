@@ -17,7 +17,10 @@ session_start();
 <main>
 
 	<div class="bg-luna">
-
+		<div class="eslogan">
+			<p class="historia">HAZ HISTORIA</p>
+			<p class="viaje">TU VIAJE ESPACIAL EMPIEZA AQUI<p>
+		</div>
 	</div> <!-- Backgroung Imagen Luna -->
 
 </main>
