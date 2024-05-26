@@ -24,7 +24,7 @@
 					<path d="M17 13h.01" />
 				</svg>
 
-				<a class="navegacion_contenido--boton" href="/blog.php" aria-label="Enlace a Blog">>blog</a>
+				<a class="navegacion_contenido--boton" href="/blog.php" aria-label="Enlace a Blog">blog</a>
 
 			</div>
 
