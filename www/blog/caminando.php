@@ -16,7 +16,7 @@
 			<picture class="bloque_imgEntrada">
 				<source srcset="../img/blog3.webp" type="image/webp">
 				<source srcset="../img/blog3.jpg" type="image/jpg">
-				<img class="entrada-imagen_blog" loading="lazy" src="../img/blog3.jpg"" alt=" Texto entrada Blog">
+				<img class="entrada-imagen_blog" loading="lazy" src="../img/blog3.jpg" alt=" Texto entrada Blog">
 			</picture>
 		<div class="texto_entrada_blog">
 		<p class="parrafo_entrada_blog">
