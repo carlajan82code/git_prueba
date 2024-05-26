@@ -58,7 +58,7 @@ function validar_registro() {
     );
     let mensaje = document.createElement("p");
     contenido_password_registro.appendChild(mensaje);
-    mensaje.innerHTML = "<p style='color:#F5E644'>contraseña no valida";
+    mensaje.innerHTML = "<p style='color:#F5E644'>La contraseña debe tener al menos 8 caracteres,al menos una letra mayúscula, una letra minúscula y un número.";
     validacion = false;
   }
 
@@ -96,7 +96,7 @@ function validar_login() {
     let contenido_pass = document.getElementById("pass_login");
     let mensaje = document.createElement("p");
     contenido_pass.appendChild(mensaje);
-    mensaje.innerHTML = "<p style='color:#F5E644'>La contraseña ingresada no es válida. Por favor, verifica tu contraseña y asegúrate de que esté escrita correctamente</p>";
+    mensaje.innerHTML = "<p style='color:#F5E644'>Contraseña incorrecta.</p>";
 
     return false;
   }
@@ -325,7 +325,7 @@ function validar_crearModificar_usuario() {
     if(errorContrasena.length == 0){
       let mensaje_error = document.createElement("p");
       mensaje_error.style.color = "yellow";
-      mensaje_error.textContent = "Contraseña no válida";
+      mensaje_error.textContent = "La contraseña debe tener al menos 8 caracteres, incluyendo al menos una letra mayúscula, una letra minúscula y un número.";
       contenedor_contrasena.appendChild(mensaje_error);
     }
   }else { //Si no está vacío
