@@ -1,5 +1,6 @@
 .centrar{
     background-color: rgb(204, 202, 202);
+    display: contents;
 }
 
 /* Media query para pantallas grandes */

@@ -11,8 +11,14 @@
 }
 
 body {
-    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
 
+.body-galeria {
+    display: block !important;
 }
 
 /** Globales */
@@ -28,9 +34,7 @@ body {
 /** Bloque Navegacion */
 
 .header {
-
-    width: 100%;
-    width: auto;
+    min-height: 50px;
 }
 
 .navegacion {
@@ -99,102 +103,8 @@ body {
 
 /** Footer */
 
-/* .footer {
-    background-color: var(--blanco);
-
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer_contenido {
-
-    margin-top: 70px;
-    display: flex;
-    flex-direction: row;
-    gap: 335px;
-    padding: 1%;
-
-}
-
-.footer_cotenido-logo {
-
-    margin-left: -8px;
-    padding: 2%;
-}
-
-.footer_cotenido-logo img {
-
-  margin-left: -170px;
-}
-
-.footer_contenido-contacto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-
-}
-
-.footer_contenido-contacto h2 {
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.footer_redes {
-    display: flex;
-    flex-direction: row;
-    cursor: pointer;
-
-}
-
-.redes {
-    width: 30px;
-    height: 30px;
-}
-
-.copi_footer {
-
-    text-align: center;
-    width: 100%;
-    padding: 15px;
-    background-color: var(--colorNavegacion);
-    color: var(--blanco);
-}  
-
-@media (max-width: 768px) {
-
-    .footer_contenido {
-        flex-direction: column;
-        gap: 10px;
-
-
-    }
-
-    .footer_cotenido-logo {
-
-        display: block;
-        margin: auto;
-
-    }
-
-    .footer_redes {
-
-        display: flex;
-        justify-content: center;
-        margin-top: 0;
-
-    }
-
-
-}
-
-*/
-
-
 .footer {
+    min-height: 50px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -328,8 +238,6 @@ body {
 }
 
 
-
-
 /** BLOG */
 .blog {
 
@@ -367,10 +275,6 @@ body {
 }
 
 /* Blog */
-
-.cabecera_entrada_blog{
-    margin-top: 30px;
-}
 
 .subtitulo_blog{
     text-align: center;
@@ -710,13 +614,13 @@ body {
 
 /** gestion_usuarios y reservas*/
 
-h1 {
+.admin-title {
     font-size: 26px;
     margin: 20px 0;
     text-align: center;
 }
 
-h1:first-of-type {
+.admin-title:first-of-type {
     margin-top: 50px;
 }
 
@@ -892,26 +796,33 @@ hr {
     align-items: center;
 }
 
-#mis-reservas-body{
+.mis-reservas {
     background-image: url(../img/astronomy-1867616_1920.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
+    height: 100%;
+}
 
-    #reservas-contenedor {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 20px;
-        color: white;
+.reservas-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    color: white;
+}   
         
-        
-        #listado-reservas{
-            width: 40%;
-            padding: 5px;
-            border-radius: 5%;
-            border: 2px solid rgb(39, 39, 108);
-            background-color: rgba(126, 126, 174, 0.623);
-        }
-    }
+.listado-reservas{
+    width: 40%;
+    padding: 5px;
+    border-radius: 5%;
+    border: 2px solid rgb(39, 39, 108);
+    background-color: rgba(126, 126, 174, 0.623);
+}
+
+.reserva-titulo {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 30px;
+    text-align: center;
 }

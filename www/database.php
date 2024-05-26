@@ -72,14 +72,6 @@ function crear_usuario($con, $nombre, $mail, $contrasena, $tipo)
     //return $resultado;
 }
 
-/*
-function borrar_usuario($con, $id){
-    $stmt = $con->prepare("DELETE FROM usuario WHERE id_usuario = (?);");
-    $stmt->bind_param("i", $id);
-    $stmt->execute();
-	$stmt->close();
-    cerrar_conexion($con);
-}*/
 
 // ELIMINA VARIOS USUARIOS A LA VES
 function borrar_usuarios($con, $codigos)
@@ -92,18 +84,6 @@ function borrar_usuarios($con, $codigos)
     mysqli_query($con, $consulta);
 }
 
-/* LA QUITO PORQUE GENERA WARNINGS QUE IMPIDEN QUE LA REDIRECCIÓN FUNCIONE 
-function borrar_usuarios($con, $codigos){
-    $placeholders = rtrim(str_repeat('?,', count($codigos)), ',');
-    $consulta = "DELETE FROM usuario WHERE id_usuario IN ($placeholders)";
-    $stmt = mysqli_prepare($con, $consulta);
-    $types = str_repeat('i', count($codigos)); // 'i' para entero
-    $params = array_merge([$stmt, $types], $codigos);
-    call_user_func_array('mysqli_stmt_bind_param', $params);
-    $resultado = mysqli_stmt_execute($stmt);
-    mysqli_stmt_close($stmt);
-    return $resultado;
-}*/
 
 function modificar_usuario($con, $id_usuario, $nombre, $mail, $pass, $tipo)
 {
@@ -159,17 +139,7 @@ function obtener_paquete($con, $id)
 //////////////////////////////////////////////
 //////////////////////////////////////////////
 
-// function crear_reserva($con, $usuario, $fecha, $paquete)
-// {
-//     $disponible = comprobar_disponibilidad($con, $paquete, $fecha);
-//     if ($disponible == true) {
-//         $stmt = mysqli_prepare($con, "insert into reserva(usuario, fecha, paquete) values(?, ?, ?);");
-//         mysqli_stmt_bind_param($stmt, "iii", $usuario, $fecha, $paquete);
-//         $resultado = mysqli_stmt_execute($stmt);
-//         return $resultado;
-//     }
-//     return false;
-// }
+
  function crear_reserva($con, $usuario, $fecha, $paquete){
  	$disponible = comprobar_disponibilidad($con, $paquete, $fecha);
  	if($disponible == true){
@@ -210,11 +180,6 @@ function borrar_reservas($con, $codigos)
     return $resultado;
 }
 
-/*NO necesito aplicar una consulta preparada, NO APLICAMOS EL BORRAR TODAS A LA VEZ*/
-/*function borrar_todas_reservas($con){
- 	$consulta = "delete from reserva";
- 	mysqli_query($con, $consulta);
- }*/
 
 function obtener_reservas($con)
 {
@@ -231,12 +196,6 @@ function obtener_reservas($con)
     return $result;
 }
 
-// function obtener_mis_reservas($con, $id)
-// {
-//     $consulta = "SELECT id_reserva, usuario, nombre, fecha 
-//                  FROM reserva 
-//                  INNER JOIN paquete ON reserva.paquete = paquete.id_paquete"; 
-// }
  function obtener_mis_reservas($con, $id){
     $consulta = 'SELECT r.id_reserva AS id_reserva, 
                     r.paquete AS paquete_id,

@@ -1,5 +1,5 @@
 <?php
-echo "<h1>Gestión de usuarios</h1>";
+echo "<h1 class='admin-title'>Gestión de usuarios</h1>";
 $resultado = obtener_usuarios($con);
 $num_filas = obtener_num_filas($resultado);
 
@@ -33,7 +33,7 @@ echo "<li class='tabla-fila'>
 	</form></ul>
 	</div>
 	<hr>";
-echo "<h1>Crear nuevo usuario</h1>
+echo "<h1 class='admin-title'>Crear nuevo usuario</h1>
 
     <div class='contenedor-tabla'><ul class='responsive-tabla'>
 	<form method='post' action='nuevousuario.php' onsubmit='return validar_crearModificar_usuario();'>
