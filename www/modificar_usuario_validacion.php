@@ -8,9 +8,9 @@ $mail = $_POST['mail'];
 $contrasena = $_POST['contrasena'];
 $tipo = $_POST['tipo']; 
 
-if(isset($nombre) && !empty($nombre) && isset($contrasena) && !empty($pass)){
+if(isset($nombre) && !empty($nombre) && isset($contrasena) && !empty($contrasena)){
 
-    modificar_usuario($con, $id_usuario, $nombre, $mail, $pass, $tipo);
+    modificar_usuario($con, $id_usuario, $nombre, $mail, $contrasena, $tipo);
     header('Location: admin_page.php');
 }
 

@@ -1,5 +1,5 @@
 <?php
-echo "<h1>Gestión de Reservas</h1>";
+echo "<h1 class='admin-title'>Gestión de Reservas</h1>";
 $resultado = obtener_reservas($con);
 $num_filas = obtener_num_filas($resultado);
 if($num_filas == 0){

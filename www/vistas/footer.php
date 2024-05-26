@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <footer class="footer">
 
 	<div class="footer_contenido">
@@ -23,7 +22,6 @@
 
 			<a href="https://whatsapp.com" target="_blank">
 				<img class="redes" src="/img/whatsapp.png" alt="red whatsapp" class="icono-whatsapp" width="40px"></a>
-
 		</div>
 
 	</div>
@@ -32,6 +30,3 @@
 		<p>Copyright @<?php echo date("Y"); ?> All rights reserved by: SEYFERT</p>
 	</div>
 </footer>
-</body>
-
-</html>
