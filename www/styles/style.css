@@ -1,10 +1,10 @@
 /* Configuración de fuente con GoogleApi */
 
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@390;400;500;600;700&display=swap');
 
 .rajdhani-light {
     font-family: "Rajdhani", sans-serif;
-    font-weight: 400;
+    font-weight: 390;
     font-style: normal;
   }
   
