@@ -14,13 +14,14 @@
     <?php
     require_once("./vistas/header.php");
     ?>
-    <header>
-        <div class="header-container">
-            <div class="cuentanos">
-                <h1>Cuéntanos de ti</h1>
+    <main>
+        <header>
+            <div class="header-container">
+                <div class="cuentanos">
+                    <h1>Cuéntanos de ti</h1>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
 
     <div class="container">
         <h2>Formulario de Contacto</h2>
@@ -76,5 +77,4 @@
     ?>
     <script src="./javaScript/validacion.js"></script>
 </body>
-
 </html>
