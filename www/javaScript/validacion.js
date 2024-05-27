@@ -61,18 +61,18 @@ function validar_registro() {
 
   // Validar contraseña
   if (!ValidarPassword(password)) {
-      let contenido_password_registro = document.getElementById("contrasena_registro");
+      let contenido_pass_registro = document.getElementById("contrasena_registro");
       let mensaje = document.createElement("p");
       mensaje.style.color = '#F5E644';
       mensaje.textContent = "La contraseña debe tener al menos 8 caracteres, incluyendo una letra mayúscula, una letra minúscula y un número.";
-      contenido_password_registro.appendChild(mensaje);
-      validacion = false;
+      contenido_pass_registro.appendChild(mensaje);
+     
   } else if (password !== confirmPassword) {
-      let contenido_confirm_password_registro = document.getElementById("conf_registro");
+      let contenido_confirm_pass_registro = document.getElementById("conf_registro");
       let mensaje = document.createElement("p");
       mensaje.style.color = '#F5E644';
       mensaje.textContent = "Las contraseñas no coinciden.";
-      contenido_confirm_password_registro.appendChild(mensaje);
+      contenido_confirm_pass_registro.appendChild(mensaje);
       validacion = false;
   }
 
