@@ -45,5 +45,6 @@
 
     </main>
 <?php include_once("./vistas/footer.php"); ?>
+<script src='javaScript/validacion.js'></script>
 </body>
 </html>
