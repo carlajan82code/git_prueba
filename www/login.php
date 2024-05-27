@@ -20,7 +20,7 @@
                 </div>
                 <div class="form_input" id="pass_login">
                     <label for="contrasena">Contraseña</label>
-                    <input type="password" class="form-control" placeholder="Introduzca password" name="contrasena" id="contrasena" tabindex="2">
+                    <input type="password" class="form-control" placeholder="Introduzca password" name="contrasena" id="contrasena" tabindex="2" aria-label="escribe tu contraseña aqui">
                 </div>
 
                 <div>

@@ -399,7 +399,6 @@ body {
 
 .texto-entrada--boton {
     padding: 15px;
-   
     text-decoration: none;
     background-color: var(--color_boton);
     color: var(--blanco);

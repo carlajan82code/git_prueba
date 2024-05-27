@@ -25,7 +25,7 @@
                     <label for="contrasena">Contraseña</label>
                     <input type="password" class="form-control" name="contrasena" placeholder="Contraseña" id="contrasena" minlength="6" maxlength="8" tabindex="3">
                 </div>
-                <div class="form_input">
+                <div class="form_input" id="conf_registro">
                     <label for="conf_contrasena">Confirmar Contraseña</label>
                     <input type="password" class="form-control" name="conf_contrasena" placeholder="Confirme Contraseña..." id="conf_contrasena" minlength="6" maxlength="8" tabindex="4">
                 </div>

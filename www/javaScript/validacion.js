@@ -22,21 +22,21 @@ function validar_registro() {
   let validacion = true;
 
   // Limpiar mensajes de error
-  let previousNombreError = document.querySelector("#nombre_registro p");
-  if (previousNombreError) {
-      previousNombreError.remove();
+  let errorPrevioNombre = document.querySelector("#nombre_registro p");
+  if (errorPrevioNombre) {
+    errorPrevioNombre.remove();
   }
-  let previousEmailError = document.querySelector("#email_registro p");
-  if (previousEmailError) {
-      previousEmailError.remove();
+  let errorPrevioEmail = document.querySelector("#email_registro p");
+  if (errorPrevioEmail) {
+    errorPrevioEmail.remove();
   }
-  let previousPasswordError = document.querySelector("#contrasena_registro p");
-  if (previousPasswordError) {
-      previousPasswordError.remove();
+  let errorPrevioPassword = document.querySelector("#contrasena_registro p");
+  if (errorPrevioPassword) {
+    errorPrevioPassword.remove();
   }
-  let previousConfirmPasswordError = document.querySelector("#confirmar_contrasena_registro p");
-  if (previousConfirmPasswordError) {
-      previousConfirmPasswordError.remove();
+  let errorPrevioConfPass = document.querySelector("#conf_registro p");
+  if (errorPrevioConfPass ) {
+    errorPrevioConfPass .remove();
   }
 
   // Validar nombre
@@ -68,7 +68,7 @@ function validar_registro() {
       contenido_password_registro.appendChild(mensaje);
       validacion = false;
   } else if (password !== confirmPassword) {
-      let contenido_confirm_password_registro = document.getElementById("confirmar_contrasena_registro");
+      let contenido_confirm_password_registro = document.getElementById("conf_registro");
       let mensaje = document.createElement("p");
       mensaje.style.color = '#F5E644';
       mensaje.textContent = "Las contraseñas no coinciden.";
