@@ -16,7 +16,7 @@ $_SESSION['paqueteId'] = $_POST["paqueteId"];
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-<?php require_once ("vistas/header.php"); ?>
+<?php require_once ("vistas/header_login.php"); ?>
 <main>
 	<div id="nueva-reserva-contenedor">
 		<div id="nueva-reserva-formulario">

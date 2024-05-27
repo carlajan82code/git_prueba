@@ -16,7 +16,7 @@ session_start(); ?>
     <title>Mis reservas</title>
 </head>
 <body>
-<?php require_once("vistas/header.php"); ?>
+<?php require_once("vistas/header_login.php"); ?>
     <main>
         <div class="mis-reservas">
             <title>Mis Reservas</title>

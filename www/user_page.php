@@ -17,7 +17,7 @@ $con = conectar();
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-<?php require_once ("vistas/header.php"); ?>
+<?php require_once ("vistas/header_login.php"); ?>
 <main>
     <h1 class='admin-title'>Bienvenido <?php echo $_SESSION['nombre']; ?></h1>
 
