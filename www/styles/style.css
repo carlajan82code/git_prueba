@@ -456,7 +456,10 @@ body {
 #container-contacto {
     .container {
         background-image: url(/img/earth-contacto.jpg);
-        color:#fff
+        color:#fff;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
     }
 
     .container-form{
