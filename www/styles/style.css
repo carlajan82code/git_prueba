@@ -420,7 +420,10 @@ body {
     color: var(--blanco);
 
 }
-  
+
+/* Contacto */
+
+#container-contacto {
     .container {
         background-image: url(/img/earth-contacto.jpg);
         color:#fff
@@ -489,7 +492,7 @@ body {
         align-items: center;
     }
 
-
+}
 
 @media (max-width: 1000px) {
     .entrada-blog {
