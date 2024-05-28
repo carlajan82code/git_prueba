@@ -10,7 +10,7 @@
     <script src="./javaScript/contacto.js"></script>
 </head>
 
-<body>
+<body id="container-contacto">
     <?php
     require_once("./vistas/header.php");
     ?>
