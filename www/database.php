@@ -168,18 +168,13 @@ function comprobar_disponibilidad($con, $paquete, $fecha)
 
 function borrar_reservas($con, $codigos)
 {
-    $placeholders = rtrim(str_repeat('?,', count($codigos)), ',');
-    $consulta = "DELETE FROM reserva WHERE id_reserva IN ($placeholders)";
-    $stmt = mysqli_prepare($con, $consulta);
-    $types = str_repeat('i', count($codigos));
-    $params = array_merge([$stmt, $types], $codigos);
-    call_user_func_array('mysqli_stmt_bind_param', $params);
-    $resultado = mysqli_stmt_execute($stmt);
-    mysqli_stmt_close($stmt);
-
-    return $resultado;
+    $consulta = "delete from reserva where id_reserva in (";
+    foreach ($codigos as $codigo) {
+        $consulta = $consulta . $codigo . ", ";
+    }
+    $consulta = $consulta . "0)";
+    mysqli_query($con, $consulta);
 }
-
 
 function obtener_reservas($con)
 {
