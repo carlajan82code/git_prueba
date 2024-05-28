@@ -681,8 +681,15 @@ hr {
         margin-bottom: 15px;
     }
 
+    a {
+        color:white;
+        text-decoration-color: #0d6efd;
+    }
+
     .tabla-header {
-        background-color: #c0c1c3;
+        background-color: #ffff;
+        border-style: solid;
+        border-color: #0d6efd;
         font-size: 14px;
         text-transform: uppercase;
         letter-spacing: 0.03em;
@@ -690,7 +697,8 @@ hr {
     }
 
     .tabla-fila {
-        background-color: #ffffff;
+        background-color: #68686aea;
+        color: white;
         box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
     }
 
@@ -717,6 +725,7 @@ hr {
     @media all and (max-width: 767px) {
         .tabla-header {
             display: none;
+
         }
 
         li {
@@ -733,6 +742,7 @@ hr {
 
             &:before {
                 color: #212529;
+                color:black;
                 padding-right: 10px;
                 content: attr(data-label);
                 flex-basis: 50%;
