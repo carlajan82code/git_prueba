@@ -20,31 +20,31 @@
             <div class="container-form">
                 <div class="form-group" id="div-nombre">
                     <label for="nombre">Nombre*:</label>
-                    <input type="text" id="nombre" name="nombre" minlength="2" maxlength="20" tabindex="1">
+                    <input type="text" id="nombre" name="nombre" minlength="2" maxlength="50" tabindex="1">
                 </div>
                 <div class="form-group" id="div-mail">
                     <label for="mail">Email*:</label>
-                    <input type="text" id="mail" name="mail" minlength="2" maxlength="20" tabindex="3">
+                    <input type="text" id="mail" name="mail" minlength="2" maxlength="50" tabindex="2">
                 </div>
                 <div class="form-group" id="div-telefono">
                     <label for="telefono">Teléfono*:</label>
-                    <input type="tel" id="telefono" name="telefono" minlength="6" tabindex="4">
+                    <input type="tel" id="telefono" name="telefono" minlength="6" tabindex="3">
                 </div>
                 <div class="form-group" id="div-direccion_1">
                     <label for="direccion1">Dirección*:</label>
-                    <input type="text" id="direccion1" name="direccion1" minlength="6" maxlength="50" tabindex="5">
+                    <input type="text" id="direccion1" name="direccion1" minlength="6" maxlength="50" tabindex="4">
                 </div>
                 <div class="form-group" id="div-ciudad">
                     <label for="ciudad">Ciudad*:</label>
-                    <input type="text" id="ciudad" name="ciudad" minlength="2" maxlength="10" tabindex="6">
+                    <input type="text" id="ciudad" name="ciudad" minlength="2" maxlength="30" tabindex="5">
                 </div>
                 <div class="form-group" id="div-estado">
                     <label for="estado">Estado/Provincia*:</label>
-                    <input type="text" id="estado" name="estado" minlength="2" maxlength="10" tabindex="7">
+                    <input type="text" id="estado" name="estado" minlength="2" maxlength="20" tabindex="6">
                 </div>
                 <div class="form-group" id="div-codigoP">
                     <label for="codigo_postal">Código Postal*:</label>
-                    <input type="text" id="codigoPostal" name="codigo_postal" minlength="2" maxlength="10" tabindex="8">
+                    <input type="text" id="codigoPostal" name="codigo_postal" minlength="2" maxlength="10" tabindex="7">
                 </div>
                 <div class="form-group" id="div-pais">
                     <label for="pais">País*:</label>
