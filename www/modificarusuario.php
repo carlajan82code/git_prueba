@@ -1,6 +1,9 @@
 <?php
 session_start();
 require_once("database.php");
+if($_SESSION['accesAdmin']===false){ /* Control de acceso*/ 
+    header("Location: login.php");
+}
 $con = conectar();
 $id_usuario = $_GET["id"];
 $resultado = obtener_usuario($con, $id_usuario);

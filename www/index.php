@@ -1,5 +1,12 @@
 <?php
 session_start();
+if(!isset($_SESSION['accesAdmin'])){
+	$_SESSION['accesAdmin']=false;
+}
+
+if (!isset($_SESSION['accesUser'])){
+	$_SESSION['accesUser']=false;
+}
 ?>
 
 <!DOCTYPE html>

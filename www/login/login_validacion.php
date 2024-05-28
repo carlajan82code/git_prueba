@@ -22,12 +22,11 @@ if (isset($login)) {
 			$_SESSION['tipo'] = $usuario['tipo'];
 
 			if($_SESSION['tipo'] === 0){
-				//$_SESSION['accesAdmin'] === true;
-		
+				$_SESSION['accesAdmin'] = true;
 				header("Location: ../admin_page.php");
 			}
 			else{
-			
+				$_SESSION['accesUser'] = true;
 				header("Location: ../user_page.php");
 			}	
 

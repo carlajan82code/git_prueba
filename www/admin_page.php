@@ -1,5 +1,8 @@
 <?php
 session_start();
+if($_SESSION['accesAdmin']===false){
+    header("Location: login.php");
+}
 require_once("database.php");
 $con = conectar();?>
 

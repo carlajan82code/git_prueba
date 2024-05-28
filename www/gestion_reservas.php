@@ -1,5 +1,5 @@
 <?php
-if(isset($_SESSION['admin'])== true ){
+if(isset($_SESSION['accesAdmin']) === true){
 echo "<h1 class='admin-title'>Gestión de Reservas</h1>";
 $resultado = obtener_reservas($con);
 $num_filas = obtener_num_filas($resultado);
@@ -29,8 +29,9 @@ else{
 		</li>
 		</form></ul></div>";
 }
-}else{
 
-	echo "No tienes acceso a este sitio";
+} else {
+
+	header("Location:login.php");
 }
 ?>

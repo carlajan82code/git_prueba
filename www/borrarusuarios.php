@@ -1,6 +1,9 @@
 <?php
 session_start();
 require_once("database.php");
+if($_SESSION['accesAdmin']===false){
+    header("Location: login.php");
+}
 $con = conectar();
 $codigos = $_POST['borrar'];
 borrar_usuarios($con, $codigos);

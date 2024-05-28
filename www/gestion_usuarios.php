@@ -1,4 +1,5 @@
 <?php
+if(isset($_SESSION['accesAdmin'])){
 echo "<h1 class='admin-title'>Gestión de usuarios</h1>";
 $resultado = obtener_usuarios($con);
 $num_filas = obtener_num_filas($resultado);
@@ -60,4 +61,8 @@ echo "<h1 class='admin-title'>Crear nuevo usuario</h1>
 	</form></ul></div>
 	<script src='javaScript/validacion.js'></script>
 	<hr>";
+}
+else{
+	header("Location: login.php");
+}
 ?>

@@ -1,5 +1,10 @@
 <?php 
-session_start(); ?>
+session_start(); 
+if ($_SESSION['accesUser']===false) {
+
+    header("Location: login.php");
+}
+?>
 
 <!--if (isset($_SESSION["id_usuario"])) {
 	require_once("vistas/header_login.php");

@@ -1,5 +1,9 @@
 <?php
 session_start();
+if ($_SESSION['accesUser']===false) {// ver con el grupo
+
+    header("Location: login.php");
+}
 if (!isset($_POST["paqueteId"])) {
 	header("Location:index.php");
 	die;

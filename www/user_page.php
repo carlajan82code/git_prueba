@@ -1,8 +1,9 @@
 <?php
 session_start();
 require_once ("database.php");
-
-
+if($_SESSION['accesUser']===false){
+    header("Location: login.php");
+}
 //Hacemos conexión a la Base de Datos
 $con = conectar();
 ?>
