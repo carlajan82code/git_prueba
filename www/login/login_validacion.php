@@ -22,6 +22,7 @@ if (isset($login)) {
 			$_SESSION['tipo'] = $usuario['tipo'];
 
 			if($_SESSION['tipo'] === 0){
+				//$_SESSION['accesAdmin'] === true;
 		
 				header("Location: ../admin_page.php");
 			}
