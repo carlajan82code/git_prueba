@@ -276,6 +276,36 @@ body {
     color: var(--color_boton);
 }
 
+/** REGISTRO EXITOSO */
+
+.container_bienvenida {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 40px;
+}
+
+.registro-exitoso {
+    margin-top: 50px;
+    padding-bottom: 10px;
+    font-size: xx-large;
+}
+
+.inicia-sesion {
+    font-weight: bold;
+    color:#0d6efd;
+}
+
+.img-registro-exitoso{
+    height: 400px;
+    background-image: url(../img/registro-exitoso.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 /** Login */
 
 .form_login {

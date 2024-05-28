@@ -37,16 +37,22 @@ if (!$resultado) {
 	   <meta charset='UTF-8'>
 	   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 	   <title>Registro Exitoso</title>
-	   <link rel='stylesheet' href='style.css'>
-	
-	   <link rel='stylesheet' href='estilos.css'>
-   </head>
+	   <link rel='stylesheet' href='../styles/style.css'>
+   </head>";
+   require_once("../vistas/header.php");
+   echo "
    <body>
+   <main>
 	   <div class='container_bienvenida'>
-		   <h1>¡Registro Exitoso!</h1>
-		   <p>¡Felicidades " . ucfirst($nombre) . " te has registrado correctamente!</p>
-		   <p><a href='../login.php'>Inicia sesión</a> para comenzar a dar tus primeros pasos hacia la Luna.</p>
+		   <h1 class='registro-exitoso'>¡Registro Exitoso!</h1>
+		   <p>¡Felicidades <b>" . ucfirst($nombre) . " </b> te has registrado correctamente!</p>
+		   <p><a class='inicia-sesion' href='../login.php'>Inicia sesión</a> para comenzar a dar tus primeros pasos hacia la Luna.</p>
 	   </div>
+	   <div class='img-registro-exitoso'>
+	   <div>
+	</main>";
+	require_once("../vistas/footer.php");
+	echo"
    </body>
    </html>";
 }
